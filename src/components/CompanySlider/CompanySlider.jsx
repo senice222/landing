@@ -38,7 +38,7 @@ const CompanySlider = () => {
                             </div>
                             <div className={style.description}>
                                 <p>
-                                    {t("Our company has close ties with many factories in China, capable of manufacturing goods according to your individual orders. Company founder")} "<span>LUSHI</span>" {t("has more than 10 years of experience in international trade with China, which guarantees our team a high level of professionalism.")}
+                                    {t("Our company has close ties with many factories in China, capable of manufacturing goods according to your individual orders. Company founder ")} "<span>LUSHI</span>" {t(" has more than 10 years of experience in international trade with China, which guarantees our team a high level of professionalism.")}
                                 </p>
                             </div>
                         </div>

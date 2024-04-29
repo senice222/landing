@@ -204,7 +204,7 @@
 .socialsDiv {
   position: absolute;
   top: 250px;
-  left: 1450px;
+  right: 40px;
 
   .iconDiv {
     margin-top: 10px;
@@ -224,31 +224,7 @@
 
 }
 
-@media (max-width: 1459px) {
-  .socialsDiv {
-    left: 1200px;
-  }
-}
-
-@media (max-width: 1208px) {
-  .socialsDiv {
-    left: 1100px;
-  }
-}
-
-@media (max-width: 1108px) {
-  .socialsDiv {
-    left: 1000px;
-  }
-}
-
-@media (max-width: 1012px) {
-  .socialsDiv {
-    left: 950px;
-  }
-}
-
-@media (max-width: 924px) {
+@media (max-width: 1071px) {
   .socialsDiv {
     position: static;
     display: flex;
@@ -259,6 +235,9 @@
       margin-left: 40px;
     }
   }
+}
+
+@media (max-width: 924px) {
   .callbackBlock {
     width: 100%;
   }
