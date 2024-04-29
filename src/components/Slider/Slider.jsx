@@ -5,6 +5,7 @@ import secondPerson from "../../assets/Rectangle 16 (1).png";
 import thirdPerson from "../../assets/Rectangle 16 (2).png";
 import fouthPerson from "../../assets/Rectangle 16 (3).png";
 import fifthPerson from "../../assets/Rectangle 16 (4).png";
+
 import { Carousel } from 'antd';
 import {useTranslation} from "react-i18next";
 
