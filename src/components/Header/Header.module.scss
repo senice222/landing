@@ -403,6 +403,8 @@
 
 }
 
+
+
 .textLang {
   display: flex;
   margin-left: 20px;
@@ -420,6 +422,7 @@
   .ru, .us {
     cursor: pointer;
     transition: .1s;
+    margin-left: 5px;
   }
 
   .ru:hover, .us:hover {
@@ -438,7 +441,6 @@
 }
 @media (max-width: 970px) {
   .textLang {
-    margin-right: 30px;
     margin-left: -60px;
   }
 }

@@ -9,6 +9,8 @@ import {useTranslation} from "react-i18next";
 
 const HeaderResponsive = ({setModal}) => {
     const navigate = useNavigate()
+    const {lang} = parseCookies()
+
     return (
         <div className={s.responsiveHeaderWrapper}>
             <div className={s.responsiveHeader}>
@@ -24,14 +26,14 @@ const HeaderResponsive = ({setModal}) => {
                         <img className={s.ru} src={rus} alt={"/"}/>
                         <img src={us} alt={"/"}/>
                     </div>
-                    <p className={s.ru} onClick={() => {
+                    <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
                         setCookie(null, 'lang', "ru", {
                             path: '/'
                         })
                         window.location.reload()
                     }}>Rus</p>
                     <p className={s.slash}>/</p>
-                    <p className={s.us} onClick={() => {
+                    <p className={lang === 'en' ? `${s.active} ${s.en}` : s.en} onClick={() => {
                         setCookie(null, 'lang', "en", {
                             path: '/'
                         })
