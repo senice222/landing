@@ -28,6 +28,7 @@
   .item {
     img {
       height: 330px;
+      width: 145px;
       object-fit: cover;
     }
   }
@@ -364,7 +365,8 @@ button {
     }
 
     .descr {
-      font-size: 13px !important;
+      font-size: 12px !important;
+      font-weight: bold;
       text-align: left;
       word-break: break-word;
     }
