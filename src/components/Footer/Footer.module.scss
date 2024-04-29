@@ -1,0 +1,95 @@
+.footer {
+    min-height: 324px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #E7ECFF;
+
+    .items {
+        padding: 65px 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .topBlocks {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            border-bottom: 1px solid #CDD1D4;
+            padding-bottom: 40px;
+            .firstBlock {
+                display: flex;
+                justify-content: space-between;
+
+                .info {
+                    p {
+                        color: #929ECC;
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .secondBlock {
+                display: flex;
+                align-items: center;
+                width: 300px;
+                img {
+                    height: 85px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 15px;
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .bottomSide {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            .links {
+                a {
+                    cursor: pointer;
+                    color: #929ECC;
+                    text-decoration: none;
+                    font-size: 15px;
+                }
+                a:not(:first-child) {
+                    margin-left: 30px;
+                }
+            }
+            .icons {
+                
+                img {
+                    margin-right: 10px;
+                    color: #A9A9A9;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .firstBlock {
+        margin: 10px;
+    }
+    .items {
+        padding: 20px !important;
+    }
+    .topBlocks {
+        width: 100% !important;
+        flex-direction: column;
+    }
+    .bottomSide {
+        width: 80% !important;
+        margin-left: 17px;
+        flex-direction: column;
+    }
+    // .links {
+    //     width: 80%;
+    // }
+}

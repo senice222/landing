@@ -1,0 +1,46 @@
+.container {
+    // width: 50%;
+    max-width: 900px;
+    margin-top: 30px;
+    display: flex;
+    .text {
+        width: 50%;
+        .title {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 48px;
+            color: #333A59
+        }
+
+        .descr {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #6F7CB2;
+            span {
+                color: #2C54FF;
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    .imgDiv {
+        img {
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .text {
+        width: 80% !important;
+    }
+    .imgDiv {
+        display: none;
+    }
+}

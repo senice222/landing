@@ -1,0 +1,375 @@
+.line {
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  
+  div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #2C54FF;
+    height: 2px;
+  }
+}
+
+.hr {
+  color: #2C54FF;
+  height: 2px;
+  // padding: 20px;
+}
+
+.sliderDiv {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: white;
+  padding: 20px;
+  display: flex !important;
+
+  .item {
+    img {
+      height: 330px;
+      object-fit: cover;
+    }
+  }
+
+  .informationSliderDiv {
+    h3 {
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    margin-left: 20px;
+
+    .ceo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: black;
+      line-height: 24px;
+    }
+
+    .descr {
+      color: #6F7CB2;
+      font-weight: 500;
+    }
+  }
+}
+
+.secondSlider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 800px !important;
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+
+  .shadowDiv {
+    padding: 10px;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+    border-radius: 5px;
+  }
+
+  .description {
+    margin-top: 10px;
+    padding: 10px;
+
+    p {
+      color: #333A59;
+      font-size: 14.5px;
+      line-height: 20px;
+      font-weight: 500;
+
+      span {
+        color: #0038FF;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .companyHeader {
+    display: flex;
+    align-items: center;
+
+    .textDivCompany {
+      margin-left: 20px;
+      width: 100%;
+      border-bottom: 1px solid #BCBCBC;
+
+      h3 {
+        margin-left: 10px;
+        color: #0038FF;
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+button {
+  background: black !important;
+}
+
+.wrapper {
+  width: 900px;
+  height: 300px;
+}
+
+
+.callbackBlock {
+  margin-top: 60px;
+ 
+
+  .searchPostavshikovBlock {
+    display: flex;
+    margin-top: 70px;
+
+    img {
+      width: 274px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list {
+      .titleList {
+        margin-top: 20px;
+      }
+
+      h4 {
+        color: #333A59;
+        font-weight: 800;
+        font-size: 21px;
+        margin-left: 15px;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 15px;
+      }
+
+      li {
+        display: flex;
+        color: #6F7CB2;
+        font-weight: 500;
+        margin-top: 10px;
+        font-size: 15.9px;
+        line-height: 19px;
+        padding-left: 20px;
+      }
+
+      li:last-child {
+        align-items: center;
+      }
+
+      li::before {
+        content: "•";
+        color: #0033e3;
+        font-size: 40px;
+        margin-right: 8px;
+
+      }
+
+      li:last-child::before {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .secondBlockPostavshiki {
+    margin-top: 15px;
+    margin-bottom: 200px;
+    // height: 1000px;
+    display: flex;
+
+    img {
+      width: 400px;
+      height: 350px;
+    }
+
+    .list {
+
+      .titleList {
+        margin-top: 20px;
+      }
+
+      h4 {
+        color: #333A59;
+        font-weight: 800;
+        font-size: 21px;
+        margin-left: 15px;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 15px;
+      }
+
+      li {
+        display: flex;
+        color: #6F7CB2;
+        font-weight: 500;
+        margin-top: 10px;
+        font-size: 15.5px;
+        line-height: 19px;
+        padding-left: 20px;
+      }
+
+      li:last-child {
+        align-items: center;
+      }
+
+      li::before {
+        content: "•";
+        color: #0033e3;
+        font-size: 40px;
+        margin-right: 8px;
+
+      }
+
+      li:last-child::before {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .titleHeaderAnswer {
+    text-align: center;
+
+    p {
+      color: #0038FF;
+      font-size: 31px;
+      line-height: 43px;
+      font-weight: 800;
+
+      span {
+        color: black
+      }
+    }
+  }
+
+
+  .answerFewQuestions {
+    margin-top: 20px;
+    width: 900px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+    padding: 20px;
+
+    // position: relative;
+    // z-index: 500;
+    p {
+      text-align: left;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+
+    input {
+      margin-top: 52px;
+      width: 80%;
+      border: none;
+      border-bottom: 2px solid #BCBCBC;
+      outline: none;
+      padding-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+
+      .backBtn {
+        background-color: white !important;
+        color: #0038FF;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
+        transition: .1s;
+      }
+
+      .backBtn:hover {
+        background-color: #eeeeee !important;
+      }
+
+      .nextBtn {
+        width: 150px;
+        height: 40px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        background-color: #0038FF !important;
+        font-weight: 500;
+        font-size: 20px;
+        transition: .1s;
+      }
+
+      .nextBtn:hover {
+        background-color: #0033e3 !important;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .searchPostavshikovBlock {
+    img {
+      display: none;
+    }
+  }
+  .secondBlockPostavshiki {
+    img {
+      display: none;
+    }
+  }
+
+  .answerFewQuestions {
+    p {
+      font-size: 16.5px !important;
+    }
+
+    width: 100% !important;
+  }
+
+  .wrapper {
+    width: 95vw !important;
+  }
+
+  .item {
+    margin-left: 10px;
+
+    img {
+      width: 171px;
+      border-radius: 5px;
+    }
+  }
+
+  .informationSliderDiv {
+    h3 {
+      font-size: 17px !important;
+    }
+
+    .ceo {
+      font-size: 17px !important;
+      word-break: break-word;
+    }
+
+    .descr {
+      font-size: 13px !important;
+      text-align: left;
+      word-break: break-word;
+    }
+  }
+
+  .sliderDiv {
+    padding: 0px !important;
+  }
+}

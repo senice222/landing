@@ -1,0 +1,145 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+
+    .modalContent {
+        background: white;
+        border-radius: 5px;
+        z-index: 201;
+        max-width: 450px;
+        min-height: 200px;
+        padding: 20px;
+        text-align: center;
+        .titleDiv {
+            min-height: 50px;
+            h3 {
+                color: #2c54ff;
+                font-size: 30px;
+                line-height: 30px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 16px;
+                color: #8A8A8A;
+                // line-height: 1px;
+            }
+        }
+        .inputs {
+            width: 100%;
+            input:first-child {
+                margin-top: 15px;
+            }
+            input {
+                margin-top: 20px;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #606060;
+                font-size: 18px;
+                // color: #D8D8D8;
+                outline: none;
+                padding: 7px;
+            }
+            .phoneInput {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #606060;
+                button {
+                    margin-top: 20px;
+                    background-color: white !important;
+                    height: 40px !important;
+                    border: none;
+                    border-radius: 0%;
+                }
+            
+                input {
+                    width: 100% !important;
+                    height: 40px !important;
+                    border: none !important;
+                    outline: none;
+                    // box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+                    padding: 10px !important;
+                    border-radius: 5px !important;
+                }
+            }
+            
+        }
+        .socials {
+            margin-top: 10px;
+            p {
+                color: #797979;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+                text-align: center;
+                user-select: none;
+            }
+            .icons {
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .item {
+                    cursor: pointer;
+                    margin-left: 10px;
+
+                }
+                .item:hover {
+                    background-color: rgb(231, 231, 231);
+                    border-radius: 5px;
+                }
+                .active {
+                    margin-left: 10px;
+                    background-color: rgb(220, 220, 220);
+                    border-radius: 5px;
+                }
+
+            }
+        }
+    }
+}
+
+.error {
+    color: rgb(221, 0, 0);
+    margin-top: 8px;
+    text-align: left;
+}
+.sendCallback {
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #0038FF !important;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+}
+.sendCallback:hover {
+    background-color: #0030df !important;
+}
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media (max-width: 768px) {
+    .modalContent {
+        width: 90%;
+        margin-right: 15px;
+    }
+}

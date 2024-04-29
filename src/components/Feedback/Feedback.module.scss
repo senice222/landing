@@ -1,0 +1,215 @@
+.feedBackBlock {
+    margin-top: 50px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+
+    .headerText {
+        color: #333A59;
+        font-size: 23px;
+        line-height: 33px;
+        font-weight: 800;
+
+        span {
+            color: #0038FF
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        margin-top: 20px;
+
+        .form {
+
+            // width: 700px;
+            display: flex;
+            flex-direction: column;
+
+            max-width: 600px;
+
+            .name {
+                margin-top: 10px;
+            }
+
+            .input {
+                margin-top: 15px;
+            }
+
+            h3 {
+                color: #091133;
+                font-size: 26px;
+                line-height: 40px;
+            }
+
+            .callbackbtn {
+                margin-top: 10px;
+                border-radius: 20px;
+                width: 100%;
+                height: 60px;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                background-color: #0038FF !important;
+                color: white;
+                transition: .1s;
+            }
+
+            .callback {
+                font-size: 16px;
+                color: #091133;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                font-weight: 400;
+
+                .coupleOfHourse {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .priceReasonDiv {
+            margin-left: 70px;
+
+            .content {
+                width: 400px;
+                height: 310px;
+                background-color: white;
+                box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                padding: 10px;
+
+                .reasonHeader {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid black;
+
+                    h3 {
+                        font-size: 18px;
+                        color: #091133;
+                        font-weight: 800;
+                    }
+                }
+
+                .someText {
+                    margin-top: 10px;
+
+                    p {
+                        font-size: 15px;
+                        line-height: 22px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input {
+    button {
+        background-color: white !important;
+    }
+}
+
+.wrappedTitle {
+    display: flex;
+}
+
+.phoneInput {
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+
+    button {
+        background-color: white !important;
+        height: 40px !important;
+        border: none;
+        border-radius: 0%;
+    }
+
+    input {
+        width: 100% !important;
+        height: 40px !important;
+        border: none !important;
+        outline: none;
+        box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+        padding: 10px !important;
+        border-radius: 5px !important;
+    }
+}
+
+.nameInput {
+    width: 100% !important;
+    height: 40px !important;
+    border: none !important;
+    outline: none;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+    padding: 10px !important;
+    border-radius: 5px !important;
+}
+
+.name {
+    width: 100% !important;
+    height: 40px !important;
+    border: none !important;
+    outline: none;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+    padding: 10px !important;
+    border-radius: 5px !important;
+}
+
+.react-international-phone-input {
+    width: 100% !important;
+}
+
+.error {
+    color: rgb(221, 0, 0);
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 370px !important;
+    }
+    .wrappedTitle {
+        margin-top: 100px;
+        width: 100%;
+    }
+
+    .headerText {
+        font-size: 17px !important;
+        width: 60%;
+    }
+
+    .priceReasonDiv {
+        // margin: 20px;
+        width: 380px;
+        margin-right: 100px;
+    }
+
+    .content {
+        margin: 20px
+    }
+
+    .feedBackBlock {
+        margin-top: 150px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form {
+        width: 85%;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 442px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .wrappedTitle {
+        align-items: center;
+        justify-content: center;
+    }
+}
