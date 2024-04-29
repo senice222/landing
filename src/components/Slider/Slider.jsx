@@ -13,11 +13,11 @@ import {useTranslation} from "react-i18next";
 const Slider = () => {
 
     const {t} = useTranslation()
-
+//autoplay
     return (
         <>
             <div className={style.wrapper}>
-                <Carousel autoplay>
+                <Carousel>
                     <div className={style.sliderDiv}>
                         <div className={style.item}>
                             <img src={ceo} alt="/" />
