@@ -60,11 +60,17 @@
 @media (max-width: 972px) {
     .container {
         display: flex;
+        width: 100%;
         justify-content: center;
+        margin-right: 50px;
+        // justify-content: center;
     }
-
+    .descr {
+        word-wrap: break-word;
+    }
     .text {
-        width: 80% !important;
+        margin-right: 50px;
+        width: 100% !important;
     }
 
     .imgDiv {
