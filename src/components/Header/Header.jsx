@@ -76,7 +76,7 @@ const Header = ({setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4,
                                 window.location.reload()
                             }}>Rus</p>
                             <p className={s.slash}>/</p>
-                            <p className={lang === 'us' ? `${s.active} ${s.us}` : s.us} onClick={() => {
+                            <p className={lang === 'en' ? `${s.active} ${s.us}` : s.us} onClick={() => {
                                 setCookie(null, 'lang', "en", {
                                     path: '/'
                                 })
