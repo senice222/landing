@@ -167,16 +167,17 @@
     margin-top: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 972px) {
     .content {
         width: 370px !important;
     }
     .wrappedTitle {
-        margin-top: 100px;
+        margin-top: 50px;
         width: 100%;
     }
 
     .headerText {
+        // width: 80% !important;
         font-size: 17px !important;
         width: 60%;
     }
@@ -192,7 +193,7 @@
     }
 
     .feedBackBlock {
-        margin-top: 150px;
+        // margin-top: 150px;
         justify-content: center;
         align-items: center;
     }

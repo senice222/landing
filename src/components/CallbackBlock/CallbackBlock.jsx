@@ -79,7 +79,7 @@ const CallbackBlock = ({blockRef2}) => {
                 </div>
                 <img src={man} alt="/" />
             </div>
-            <CompanySlider />
+            {/* <CompanySlider /> */}
         </div>
     )
 }

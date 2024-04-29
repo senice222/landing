@@ -1,13 +1,19 @@
 .line {
-    margin-top: 130px;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+
+  div {
     display: flex;
     justify-content: center;
-    
-    div {
-      display: flex;
-      justify-content: center;
-      width: 70%;
-      background-color: #2C54FF;
-      height: 2px;
-    }
+    width: 70%;
+    background-color: #2C54FF;
+    height: 2px;
   }
+}
+
+@media (max-width: 972px) {
+  .line {
+    margin-top: 20px !important;
+  }
+}

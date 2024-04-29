@@ -19,6 +19,7 @@ import inst from '../../assets/instagram-svgrepo-com.png'
 import viber from '../../assets/viber-svgrepo-com.png'
 import {useTranslation} from "react-i18next";
 import AboutCompany from '../../components/AboutCompany/AboutCompany';
+import CompanySlider from '../../components/CompanySlider/CompanySlider';
 
 const Home = () => {
     const [modal, setModal] = useState(false)
@@ -78,8 +79,9 @@ const Home = () => {
                 <AboutCompany blockRef1={blockRef1}/>
                 <Slider/>
                 <CallbackBlock blockRef2={blockRef2}/>
-                <Feedback/>
                 <Stages/>
+                <Feedback/>
+                <CompanySlider />
                 <FAQ blockRef4={blockRef4}/>
             </div>
         </Layout>
