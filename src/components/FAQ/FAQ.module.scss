@@ -1,6 +1,7 @@
 .faq {
     margin-top: 50px;
     margin-bottom: 30px;
+
     .title {
         p {
             margin-top: 10px;
@@ -81,6 +82,11 @@
     }
 }
 
+.botOpen {
+    max-height: 400px;
+    transition: max-height 0.25s ease-in;
+}
+
 .opened {
     svg {
         transform: rotateZ(180deg);
@@ -92,10 +98,12 @@
         width: 90%;
         margin-top: 230px !important;
     }
+
     .wrapp {
         max-width: 100%;
         word-wrap: break-word;
     }
+
     .information {
         width: 100% !important;
     }

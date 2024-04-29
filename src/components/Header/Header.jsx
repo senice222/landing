@@ -4,7 +4,7 @@ import {NavLink, useNavigate} from "react-router-dom";
 import lushi from '../../assets/Group 14.png'
 import rus from '../../assets/flag-for-flag-russia-svgrepo-com.png'
 import us from '../../assets/flag-us-svgrepo-com.png'
-import {setCookie} from "nookies";
+import {parseCookies, setCookie} from "nookies";
 import {useTranslation} from "react-i18next";
 
 const HeaderResponsive = ({setModal}) => {
@@ -47,6 +47,7 @@ const HeaderResponsive = ({setModal}) => {
 const Header = ({setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5}) => {
     const navigate = useNavigate()
     const {t} = useTranslation()
+    const {lang} = parseCookies()
 
     return (
         <>
@@ -66,7 +67,7 @@ const Header = ({setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4,
                             <img className={s.us} src={us} alt={"/"}/>
                         </div>
                         <div className={s.textLang}>
-                            <p className={s.ru} onClick={() => {
+                        <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
                                 setCookie(null, 'lang', "ru", {
                                     path: '/'
                                 })
