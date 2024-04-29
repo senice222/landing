@@ -8,9 +8,9 @@ const AboutCompany = ({blockRef1}) => {
     return (
         <div className={style.container} ref={blockRef1}>
             <div className={style.text}>
-                <p className={style.title}>{t("About company")}</p>
+                <p className={style.title}>{t("ABOUT THE COMPANY")}</p>
                 <p className={style.descr}>
-                    {t("We are pleased to welcome you to the company ")} <span>"LUSHI"</span> {t("- your reliable partner in international trade!")}
+                    {t("We are pleased to welcome you to the company ")} <span>"LUSHI"</span> {t(" - your reliable partner in international trade!")}
                 </p>
                 <p className={style.descr}>
                     {t("Company ")} <span>"LUSHI"</span> {t(" provides a range of services for companies and entrepreneurs, from finding a reliable manufacturer.and purchase of goods and finishing with delivery of goods to your country. Also, the company has close business relations with a lot of factories in China, capable of manufacturing goods on individual orders.")}
