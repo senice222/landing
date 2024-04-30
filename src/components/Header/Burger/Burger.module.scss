@@ -1,17 +1,19 @@
 .bgModal {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
   transition: .3s;
+  overflow: hidden;
 
   .content {
+    overflow: hidden;
     position: absolute;
     right: 0;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
