@@ -34,8 +34,8 @@ const BurgerModal = ({opened, setOpened, scrollTo, blockRef1, blockRef2, blockRe
                 </div>
                 <div className={s.bottom}>
                     <div className={s.line}/>
+                    <button className={s.catalog}>Наш номер телефона</button>
                     <h1 className={s.number}>+375(000) - 00 - 00</h1>
-                    {/* <button className={s.catalog}>Запросить звонок</button> */}
                 </div>
             </div>
         </div>
