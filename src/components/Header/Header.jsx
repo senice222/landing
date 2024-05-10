@@ -6,6 +6,7 @@ import rus from '../../assets/flag-for-flag-russia-svgrepo-com.png'
 import us from '../../assets/flag-us-svgrepo-com.png'
 import {parseCookies, setCookie} from "nookies";
 import {useTranslation} from "react-i18next";
+import burger from '../../assets/free-icon-menu-4254068.png'
 
 const HeaderResponsive = ({setModal}) => {
     const navigate = useNavigate()
@@ -15,7 +16,7 @@ const HeaderResponsive = ({setModal}) => {
         <div className={s.responsiveHeaderWrapper}>
             <div className={s.responsiveHeader}>
                 <div onClick={() => setModal(true)} className={s.burgerIcon}>
-                    <img src={"https://i.ibb.co/Sr9DGwd/image.png"} alt="menu" className={s.menu}/>
+                    <img src={burger} alt="menu" className={s.menu}/>
                 </div>
                 <div className={s.imgDiv}>
                     <img src={lushi} className={s.image2} alt={"logo"}

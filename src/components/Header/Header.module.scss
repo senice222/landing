@@ -194,11 +194,12 @@
   }
 
   .menu {
+    height: 32px;
+    width: 32px;
     margin-left: 20px;
     cursor: pointer;
   }
 }
-
 .catalogDiv {
   position: absolute;
   transition: .4s;
@@ -300,7 +301,6 @@
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #BCBCBC;
-  padding: 10px;
 
   @media (max-width: 968px) {
     display: flex;
@@ -405,6 +405,10 @@
 
 .burgerIcon {
   margin-left: 20px;
+  img {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .textLang {
@@ -422,6 +426,7 @@
   }
 
   .ru, .us {
+    font-size: 16px;
     cursor: pointer;
     transition: .1s;
     margin-left: 5px;
@@ -442,6 +447,9 @@
   display: flex;
 }
 @media (max-width: 970px) {
+  .imgs {
+    display: none;
+  }
   .textLang {
     //margin-left: -60px;
     margin-right: 10px;
