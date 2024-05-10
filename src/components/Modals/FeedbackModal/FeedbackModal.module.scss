@@ -47,7 +47,6 @@
                 border: none;
                 border-bottom: 1px solid #606060;
                 font-size: 18px;
-                // color: #D8D8D8;
                 outline: none;
                 padding: 7px;
             }
@@ -114,6 +113,15 @@
     color: rgb(221, 0, 0);
     margin-top: 8px;
     text-align: left;
+}
+.socialInput {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #606060;
+    font-size: 18px;
+    outline: none;
+    padding: 7px;
 }
 .sendCallback {
     margin-top: 20px;

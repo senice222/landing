@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Header.module.scss'
-import {NavLink, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import lushi from '../../assets/Group 14.png'
 import rus from '../../assets/flag-for-flag-russia-svgrepo-com.png'
 import us from '../../assets/flag-us-svgrepo-com.png'
@@ -14,7 +14,7 @@ const HeaderResponsive = ({setModal}) => {
     return (
         <div className={s.responsiveHeaderWrapper}>
             <div className={s.responsiveHeader}>
-                <div onClick={() => setModal(true)}>
+                <div onClick={() => setModal(true)} className={s.burgerIcon}>
                     <img src={"https://i.ibb.co/Sr9DGwd/image.png"} alt="menu" className={s.menu}/>
                 </div>
                 <div className={s.imgDiv}>

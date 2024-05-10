@@ -16,16 +16,18 @@
         flex-wrap: wrap;
         justify-content: center;
         max-width: 1200px;
-        margin-top: 10px;
+        margin-top: 40px;
         .item {
             margin: 10px;
             border-radius: 10px;
             min-height: 340px;
-            max-width: 339px;
+            width: 339px;
             box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
+            transition: .2s;
+            cursor: pointer;
             .headerItem {
-                // padding: 10px;
                 margin: 10px;
+                max-width: 339px;
                 display: flex;
                 align-items: center;
                 border-bottom: 2px solid #0038FF;
@@ -43,13 +45,24 @@
                 }
             }
             .descr {
+                width: 339px;
                 padding: 10px;
                 color: #333A59;
                 font-weight: 600;
                 font-size: 14px;
             }
         }
+        .item:hover {
+            transform: scale(1.02);
+        }
     }
+}
+
+.line {
+    margin-top: 50px;
+    height: 2px;
+    width: 70%;
+    background-color: #2C54FF;
 }
 
 @media (max-width: 768px) {
@@ -59,7 +72,7 @@
 
     .stagesContainer {
         h3 {
-            font-size: 28px;
+            font-size: 26px;
             margin-left: 10px;
         }
     }

@@ -19,7 +19,8 @@ const FeedbackModal = ({modal, setModal}) => {
 
     const onSubmit = async (data) => {
         try {
-            const {email, name, phone} = data
+            console.log(data)
+            const {email, name, phone} = data // messenger
             const newObj = {
                 email,
                 name,
@@ -80,6 +81,12 @@ const FeedbackModal = ({modal, setModal}) => {
                         />
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
                     </div>
+                    <input type="text" className={style.socialInput} placeholder={t("Enter your messenger")}
+                           {...register("messengerInfo", {
+                               required: t("Enter your messenger")
+                           })}
+                    />
+                    {errors.messengerInfo && <p className={style.error}>{errors.messengerInfo.message}</p>}
                     <div className={style.socials}>
                         <p>{t("Select a social network for communication")}</p>
                         <div className={style.icons}>

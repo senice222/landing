@@ -87,7 +87,7 @@ app.post("/api/feedback-modal", (req, res) => {
 
 app.post("/api/leave-contacts-modal", (req, res) => {
     const {email, phone, name, messenger} = req.body
-    console.log(req.body)
+
     const styledEmailContent = `
     <html>
     <head>

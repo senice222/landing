@@ -403,11 +403,13 @@
 
 }
 
-
+.burgerIcon {
+  margin-left: 20px;
+}
 
 .textLang {
   display: flex;
-  margin-left: 20px;
+  //margin-left: 20px;
   .imgs {
     .ru {
       margin-right: 5px;
@@ -441,6 +443,7 @@
 }
 @media (max-width: 970px) {
   .textLang {
-    margin-left: -60px;
+    //margin-left: -60px;
+    margin-right: 10px;
   }
 }

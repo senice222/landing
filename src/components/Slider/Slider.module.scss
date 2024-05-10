@@ -2,7 +2,7 @@
   margin-top: 130px;
   display: flex;
   justify-content: center;
-  
+
   div {
     display: flex;
     justify-content: center;
@@ -27,9 +27,10 @@
 
   .item {
     img {
-      height: 330px;
-      width: 145px;
+      height: 340px;
+      width: 220px;
       object-fit: cover;
+      border-radius: 5px;
     }
   }
 
@@ -120,7 +121,7 @@ button {
 
 .callbackBlock {
   margin-top: 60px;
- 
+
 
   .searchPostavshikovBlock {
     display: flex;
@@ -320,7 +321,19 @@ button {
 
 }
 
+@media (max-width: 440px) {
+  .item {
+    img {
+      width: 163px !important;
+    }
+  }
+}
+
 @media (max-width: 768px) {
+  .informationSliderDiv {
+    //margin-right: 10px;
+  }
+
   .searchPostavshikovBlock {
     img {
       display: none;
@@ -365,6 +378,8 @@ button {
     }
 
     .descr {
+      //padding: 10px;
+      margin-right: 5px;
       font-size: 12px !important;
       font-weight: bold;
       text-align: left;
@@ -374,6 +389,6 @@ button {
 
   .sliderDiv {
     padding: 0px !important;
-    min-height: 550px;
+    //min-height: 300px;
   }
 }

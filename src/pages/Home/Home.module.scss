@@ -79,7 +79,7 @@
 }
 
 .callbackBlock {
-  margin-top: 60px;
+  //margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,10 +255,12 @@
 
   .wrapper {
     align-items: center;
-    width: 50%;
-
+    flex-direction: column;
+    width: 90vw;
+    justify-content: center;
+    display: flex;
     .list {
-      width: 390px;
+      width: 90vw;
 
       h4 {
       }
@@ -287,5 +289,28 @@
       display: none;
     }
   }
+}
+.searchManufaktura {
+  margin-top: 10px;
+}
+.conveyor {
+  margin-top: 6px;
+}
 
+@media (max-width: 768px) {
+  .searchPostavshikovBlock {
+    width: 90%;
+  }
+  .list {
+    width: 350px !important;
+    //width: 100% !important;
+  }
+  .titleList {
+    font-size: 15px !important;
+    margin-left: 5px !important;
+  }
+  li {
+    padding-left: 10px !important;
+    font-size: 12px !important;
+  }
 }

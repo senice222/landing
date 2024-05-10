@@ -78,7 +78,14 @@
         margin: 10px;
     }
     .items {
-        padding: 20px !important;
+        padding: 10px !important;
+    }
+    .info {
+        p {
+            margin-left: 0px !important;
+            width: 150px !important;
+            word-break: break-all;
+        }
     }
     .topBlocks {
         width: 100% !important;

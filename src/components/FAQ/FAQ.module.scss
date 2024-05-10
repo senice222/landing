@@ -1,5 +1,4 @@
 .faq {
-    margin-top: 50px;
     margin-bottom: 30px;
 
     .title {
@@ -97,10 +96,11 @@
 @media (max-width: 768px) {
     .faq {
         width: 90%;
-        margin-top: 230px !important;
+        //margin-top: 230px !important;
     }
 
     .wrapp {
+        margin: 10px;
         max-width: 100%;
         word-wrap: break-word;
     }

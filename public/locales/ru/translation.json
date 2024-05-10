@@ -142,5 +142,6 @@
   "Leave a request": "Оставить заявку",
   "The application has been successfully sent.": "Заявка успешно отправлена.",
   "Name cannot contain numbers": "Имя не может содержать цифры",
-  "Success.": "Успех."
+  "Success.": "Успех.",
+  "Enter your messenger": "Введите ваш мессенджер"
 }
