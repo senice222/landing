@@ -136,6 +136,11 @@
   }
 }
 
+.slick-dots {
+  position: absolute !important;
+  bottom: 66px !important;
+}
+
 @media (max-width: 970px) {
   .quiz {
     margin-top: 160px;
@@ -143,6 +148,7 @@
   }
   .titleHeaderAnswer {
     width: 100%;
+    margin-top: 154px;
     p {
       font-size: 26px;
     }
@@ -162,4 +168,5 @@
       min-width: 0px !important;
     }
   }
+  
 }
