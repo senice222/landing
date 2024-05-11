@@ -22,7 +22,7 @@ const ThirdItem = ({ setStep }) => {
     }
 
     return (
-        <>
+        <div className={style.quiz}>
             <div className={style.titleHeaderAnswer}>
                 <p>
                     {t("ANSWER A FEW QUESTIONS SO THAT'SO")}
@@ -46,7 +46,7 @@ const ThirdItem = ({ setStep }) => {
                     <button className={style.nextBtn} onClick={handleNext} style={{ fontSize: "15px" }}>{t("Next")}</button>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

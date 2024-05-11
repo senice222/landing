@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import style from './SecondItem.module.scss'
 import { useDispatch } from 'react-redux'
 import { setHowFast } from '../../../../store/slices/ConsultSlice'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const SecondItem = ({ setStep }) => {
     const dispatch = useDispatch()
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const handleChange = (e) => {
         dispatch(setHowFast(e.target.value))
@@ -17,7 +17,7 @@ const SecondItem = ({ setStep }) => {
     }
 
     return (
-        <>
+        <div className={style.quiz}>
             <div className={style.titleHeaderAnswer}>
                 <p>
                     {t("ANSWER A FEW QUESTIONS SO THAT'SO")}
@@ -45,7 +45,8 @@ const SecondItem = ({ setStep }) => {
                     <button className={style.nextBtn} onClick={handleNext}>{t("Next")}</button>
                 </div>
             </div>
-        </>
+            <div />
+        </div>
     )
 }
 
