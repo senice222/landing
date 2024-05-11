@@ -13,7 +13,7 @@ const Feedback = () => {
     const [phone, setPhone] = useState("")
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const {t} = useTranslation()
-
+    
     const onSubmit = async (data) => {
         try {
             await axios.post("http://localhost:3030/api/feedback-modal", data)
@@ -50,6 +50,7 @@ const Feedback = () => {
                             defaultCountry="ru"
                             {...register("phone", { required: t("Enter your phone") })}
                             className={style.phoneInput}
+                            value={phone}
                             onChange={(phone) => {
                                 setPhone(phone)
                             }}
