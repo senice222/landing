@@ -19,7 +19,7 @@ const Footer = ({blockRef5, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4
                     <div className={style.firstBlock}>
                         <img src={lushi} alt="/" />
                         <div className={style.info}>
-                            <p>{t("Mail")} lushi.minsk@gmail.com</p>
+                            <p>{t("Mail")}: lushi.minsk@gmail.com</p>
                             <p>{t("Phone:")} +375(000) - 00 - 00</p>
                             <p>Tel:4008001187</p>
                             <p>{t("Accepting applications:")} 24/7</p>
