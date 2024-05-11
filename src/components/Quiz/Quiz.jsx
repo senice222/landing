@@ -3,31 +3,13 @@ import style from './Quiz.module.scss'
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setProductName } from '../../store/slices/ConsultSlice';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Quiz = ({ step, setStep }) => {
     const [value, setValue] = useState('')
     const [error, setError] = useState(false)
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     const dispatch = useDispatch()
-
-    const handleSubmit = async (e) => {
-        try {
-            await axios.post("http://localhost:3030/api/send", {
-                to: "artemprimorskij7@gmail.com",
-                from: "Support Team",
-                subject: 'Новая консультация!',
-                html: `
-                <p>Hey</p>
-                <p>Please click below to confirm your email</p>                
-                <p>If you did not request this email you can safely ignore it.</p>
-            `,
-            });
-            alert("Email sent!");
-        } catch (err) {
-            alert(err);
-        }
-    };
 
     const handleNextStep = () => {
         if (value !== "") {

@@ -1,21 +1,33 @@
 import React, { useState } from 'react'
 import style from '.././SecondItem/SecondItem.module.scss'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setArranges } from '../../../../store/slices/ConsultSlice'
 import {useTranslation} from "react-i18next";
+import axios from 'axios';
+import { notification } from 'antd';
 
 const ThirdItem = ({setStep}) => {
     const [radioValue, setRadioValue] = useState("")
     const dispatch = useDispatch()
     const {t} = useTranslation()
-
+    const data = useSelector(state => state)
     const handleChange = (e) => {
         setRadioValue(e.target.value)
     }
-
-    const handleSend = async () => {
+    console.log(data)
+    const handleSend = async () => {   
         dispatch(setArranges(radioValue))
-        
+        try {
+            // await axios.post("http://localhost:3030/api/quiz-contacts-modal", newObj)
+            notification.success({
+                duration: 4,
+                message: t("Success."),
+                description: t("The application has been successfully sent."),
+            })
+            setStep(0)
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     return (
