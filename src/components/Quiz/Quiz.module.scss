@@ -1,15 +1,14 @@
 .titleHeaderAnswer {
   text-align: center;
-  //margin-top: 150px;
-
+  margin-top: 100px;
   p {
-    color: #0038FF;
+    color: #0038ff;
     font-size: 31px;
     line-height: 43px;
     font-weight: 800;
 
     span {
-      color: black
+      color: black;
     }
   }
 }
@@ -19,13 +18,18 @@
   font-size: 22px;
 }
 
-
 .answerFewQuestions {
   margin-top: 20px;
+  margin-bottom: 60px;
+  border-radius: 15px;
   width: 900px;
+  min-height: 275px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
   padding: 20px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   // position: relative;
   // z-index: 500;
   p {
@@ -40,7 +44,7 @@
     margin-top: 52px;
     width: 80%;
     border: none;
-    border-bottom: 2px solid #BCBCBC;
+    border-bottom: 2px solid #bcbcbc;
     outline: none;
     padding-bottom: 5px;
     font-size: 14px;
@@ -54,14 +58,14 @@
 
     .backBtn {
       background-color: white !important;
-      color: #0038FF;
+      color: #0038ff;
       cursor: pointer;
       padding: 5px;
       border-radius: 5px;
       border: none;
       font-weight: 500;
-      font-size: 20px;
-      transition: .1s;
+      font-size: 18px;
+      transition: 0.1s;
     }
 
     .backBtn:hover {
@@ -69,24 +73,37 @@
     }
 
     .nextBtn {
+      position: relative;
       width: 150px;
       height: 40px;
       border-radius: 15px;
       border: none;
       color: white;
       cursor: pointer;
-      background-color: #0038FF !important;
+      background-color: #0038ff !important;
       font-weight: 500;
-      font-size: 20px;
-      transition: .1s;
-    }
+      font-size: 18px;
+      transition: 0.1s;
+  }
+  
+  .nextBtn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -4px; /* Зсуваємо на відповідну відстань вправо */
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: white;
+  }
 
     .nextBtn:hover {
       background-color: #0033e3 !important;
     }
   }
 }
-.quiz  {
+.quiz {
   width: 100%;
   margin-top: 160px;
 }
@@ -95,8 +112,17 @@
   .quiz {
     margin-top: 150px !important;
   }
+  .nextBtn,
+  .backBtn {
+    font-size: 15px !important;
+  }
+  .btns {
+    align-items: center;
+  }
+  .error {
+    font-size: 15px !important;
+  }
 }
-
 
 @media (max-width: 400px) {
   .quiz {
@@ -109,9 +135,10 @@
     margin-top: 240px !important;
   }
 }
+
 @media (max-width: 970px) {
   .quiz {
-    margin-top: 100px;
+    margin-top: 160px;
     width: 90%;
   }
   .titleHeaderAnswer {
@@ -121,7 +148,6 @@
     }
   }
   .answerFewQuestions {
-    
     input {
       width: 100% !important;
       font-size: 12px !important;

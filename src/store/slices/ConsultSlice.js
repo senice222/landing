@@ -4,9 +4,9 @@ const consultSlice = createSlice({
     name: 'todos',
     initialState: {
         productName: "",
-        howFast: "",
-        arranges: "",
-        messanger: ""
+        howFast: "Urgent",
+        arranges: "Yes, i am",
+        messenger: ""
     },
     reducers: {
         setProductName: (state, action) => {
@@ -18,11 +18,11 @@ const consultSlice = createSlice({
         setArranges: (state, action) => {
             state.arranges = action.payload
         },
-        setMessanger: (state, action) => {
-            state.messanger = action.payload
+        setMessenger: (state, action) => {
+            state.messenger = action.payload
         }
     },
 })
 
-export const { setProductName, setHowFast, setArranges } = consultSlice.actions
+export const { setProductName, setHowFast, setArranges, setMessenger } = consultSlice.actions
 export default consultSlice.reducer

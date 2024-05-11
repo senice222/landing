@@ -6,10 +6,9 @@
   width: 100%;
 
   .textDiv {
-
     p {
       margin-top: 20px;
-      color: #0038FF;
+      color: #0038ff;
       line-height: 30px;
       font-size: 18px;
       letter-spacing: 0.7px;
@@ -20,7 +19,7 @@
     margin-top: 50px;
 
     button {
-      background-color: #0038FF !important;
+      background-color: #0038ff !important;
       width: 340px;
       height: 50px;
       cursor: pointer;
@@ -29,7 +28,7 @@
       font-weight: bold;
       outline: none;
       border: none;
-      transition: .1s;
+      transition: 0.1s;
     }
 
     button:hover {
@@ -73,7 +72,7 @@
     display: flex;
     justify-content: center;
     width: 95%;
-    background-color: #2C54FF;
+    background-color: #2c54ff;
     height: 2px;
   }
 }
@@ -105,7 +104,7 @@
       }
 
       h4 {
-        color: #333A59;
+        color: #333a59;
         font-weight: 800;
         font-size: 21px;
         margin-left: 15px;
@@ -118,7 +117,7 @@
 
       li {
         display: flex;
-        color: #6F7CB2;
+        color: #6f7cb2;
         font-weight: 500;
         margin-top: 10px;
         font-size: 15.9px;
@@ -135,7 +134,6 @@
         color: #0033e3;
         font-size: 40px;
         margin-right: 8px;
-
       }
 
       li:last-child::before {
@@ -155,13 +153,12 @@
     }
 
     .list {
-
       .titleList {
         margin-top: 20px;
       }
 
       h4 {
-        color: #333A59;
+        color: #333a59;
         font-weight: 800;
         font-size: 21px;
         margin-left: 15px;
@@ -174,7 +171,7 @@
 
       li {
         display: flex;
-        color: #6F7CB2;
+        color: #6f7cb2;
         font-weight: 500;
         margin-top: 10px;
         font-size: 15.5px;
@@ -191,7 +188,6 @@
         color: #0033e3;
         font-size: 40px;
         margin-right: 8px;
-
       }
 
       li:last-child::before {
@@ -221,10 +217,22 @@
 
 .hideSocials {
   display: none;
+}
 
+.line1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #2c54ff;
+  height: 2px;
+  margin-top: 50px;
 }
 
 @media (max-width: 1071px) {
+  .headerText {
+    font-size: 30px !important;
+  }
+  
   .socialsDiv {
     position: static;
     display: flex;
@@ -238,18 +246,29 @@
 }
 
 @media (max-width: 924px) {
+  .headerText {
+    font-size: 30px !important;
+  }
   .callbackBlock {
     width: 100%;
+  }
+  .line1 {
+    margin-top: 170px !important
   }
   .img {
     width: 86%;
   }
-
+  .line1 {
+    width: 90% !important;
+  }
   .line {
-    width: 70%;
+    width: 90% !important;
+  }
+  .line {
+    width: 90vw;
 
     div {
-      width: 70%;
+      width: 90vw;
     }
   }
 
@@ -297,7 +316,35 @@
   margin-top: 6px;
 }
 
+.headerText {
+  color: #333a59;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 800;
+  text-align: center;
+
+  span {
+    color: #0038ff;
+  }
+}
+.wrappedTitle {
+  margin-top: 90px;
+  max-width: 900px;
+}
+.line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #2c54ff;
+  height: 2px;
+}
+
 @media (max-width: 768px) {
+  .headerText {
+    width: 95vw;
+    font-size: 25px !important;
+  }
+
   .searchPostavshikovBlock {
     width: 90%;
   }

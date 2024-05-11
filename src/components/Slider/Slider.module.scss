@@ -7,13 +7,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #2C54FF;
+    background-color: #2c54ff;
     height: 2px;
   }
 }
 
 .hr {
-  color: #2C54FF;
+  color: #2c54ff;
   height: 2px;
   // padding: 20px;
 }
@@ -52,7 +52,7 @@
     }
 
     .descr {
-      color: #6F7CB2;
+      color: #6f7cb2;
       font-weight: 500;
     }
   }
@@ -78,13 +78,13 @@
     padding: 10px;
 
     p {
-      color: #333A59;
+      color: #333a59;
       font-size: 14.5px;
       line-height: 20px;
       font-weight: 500;
 
       span {
-        color: #0038FF;
+        color: #0038ff;
         font-weight: 700;
       }
     }
@@ -97,11 +97,11 @@
     .textDivCompany {
       margin-left: 20px;
       width: 100%;
-      border-bottom: 1px solid #BCBCBC;
+      border-bottom: 1px solid #bcbcbc;
 
       h3 {
         margin-left: 10px;
-        color: #0038FF;
+        color: #0038ff;
         font-size: 25px;
         line-height: 40px;
       }
@@ -115,13 +115,13 @@ button {
 
 .wrapper {
   width: 900px;
+  // display: flex;
+  // flex-direction: column;
   height: 300px;
 }
 
-
 .callbackBlock {
   margin-top: 60px;
-
 
   .searchPostavshikovBlock {
     display: flex;
@@ -142,7 +142,7 @@ button {
       }
 
       h4 {
-        color: #333A59;
+        color: #333a59;
         font-weight: 800;
         font-size: 21px;
         margin-left: 15px;
@@ -155,7 +155,7 @@ button {
 
       li {
         display: flex;
-        color: #6F7CB2;
+        color: #6f7cb2;
         font-weight: 500;
         margin-top: 10px;
         font-size: 15.9px;
@@ -172,7 +172,6 @@ button {
         color: #0033e3;
         font-size: 40px;
         margin-right: 8px;
-
       }
 
       li:last-child::before {
@@ -193,13 +192,12 @@ button {
     }
 
     .list {
-
       .titleList {
         margin-top: 20px;
       }
 
       h4 {
-        color: #333A59;
+        color: #333a59;
         font-weight: 800;
         font-size: 21px;
         margin-left: 15px;
@@ -212,7 +210,7 @@ button {
 
       li {
         display: flex;
-        color: #6F7CB2;
+        color: #6f7cb2;
         font-weight: 500;
         margin-top: 10px;
         font-size: 15.5px;
@@ -229,7 +227,6 @@ button {
         color: #0033e3;
         font-size: 40px;
         margin-right: 8px;
-
       }
 
       li:last-child::before {
@@ -242,17 +239,16 @@ button {
     text-align: center;
 
     p {
-      color: #0038FF;
+      color: #0038ff;
       font-size: 31px;
       line-height: 43px;
       font-weight: 800;
 
       span {
-        color: black
+        color: black;
       }
     }
   }
-
 
   .answerFewQuestions {
     margin-top: 20px;
@@ -273,7 +269,7 @@ button {
       margin-top: 52px;
       width: 80%;
       border: none;
-      border-bottom: 2px solid #BCBCBC;
+      border-bottom: 2px solid #bcbcbc;
       outline: none;
       padding-bottom: 5px;
       font-size: 14px;
@@ -286,14 +282,14 @@ button {
 
       .backBtn {
         background-color: white !important;
-        color: #0038FF;
+        color: #0038ff;
         cursor: pointer;
         padding: 5px;
         border-radius: 5px;
         border: none;
         font-weight: 500;
         font-size: 20px;
-        transition: .1s;
+        transition: 0.1s;
       }
 
       .backBtn:hover {
@@ -307,10 +303,10 @@ button {
         border: none;
         color: white;
         cursor: pointer;
-        background-color: #0038FF !important;
+        background-color: #0038ff !important;
         font-weight: 500;
         font-size: 20px;
-        transition: .1s;
+        transition: 0.1s;
       }
 
       .nextBtn:hover {
@@ -318,7 +314,6 @@ button {
       }
     }
   }
-
 }
 
 @media (max-width: 440px) {
@@ -390,5 +385,24 @@ button {
   .sliderDiv {
     padding: 0px !important;
     //min-height: 300px;
+  }
+}
+
+.wrappLine {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  .line {
+    width: 100%;
+    background-color: #2c54ff;
+    height: 2px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .line {
+    width: 90% !important;
   }
 }

@@ -2,15 +2,14 @@ import React from 'react'
 import style from './Footer.module.scss'
 import lushi from '../../assets/Group 14logo.png'
 import map from '../../assets/location-sign-svgrepo-com 1.png'
-import { NavLink } from 'react-router-dom'
 import tg from '../../assets/telegram-svgrepo-com (1).png'
 import inst from '../../assets/instagram-svgrepo-com (1).png'
 import viber from '../../assets/viber-svgrepo-com (1).png'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-const Footer = ({blockRef5, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4}) => {
+const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2}) => {
     // СДЕЛАТЬ ДИПЛИНКИ
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <footer className={style.footer} ref={blockRef5}>
@@ -28,7 +27,10 @@ const Footer = ({blockRef5, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4
                     <div className={style.secondBlock}>
                         <img src={map} alt="/" />
                         <p>
-                            <span>Адрес: 220089 г. Минск, ул. Железнодорожная, д. 33А, каб. 402</span>
+                            <span>8th Floor, Unit 1, Building 8, Phase 1,
+                                Chengfa Jindai Smart Industrial Park</span> <br/>
+                            ,Zhengzhou, Lumaotong (LMT) International
+                            Logistics Group
                         </p>
                     </div>
                 </div>

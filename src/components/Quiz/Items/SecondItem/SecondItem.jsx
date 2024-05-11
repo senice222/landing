@@ -5,16 +5,15 @@ import { setHowFast } from '../../../../store/slices/ConsultSlice'
 import {useTranslation} from "react-i18next";
 
 const SecondItem = ({ setStep }) => {
-    const [radioValue, setRadioValue] = useState("")
     const dispatch = useDispatch()
     const {t} = useTranslation()
+
     const handleChange = (e) => {
-        setRadioValue(e.target.value)
+        dispatch(setHowFast(e.target.value))
     }
 
     const handleNext = () => {
         setStep((prev) => prev += 1)
-        dispatch(setHowFast(radioValue))
     }
 
     return (

@@ -2,25 +2,32 @@ import React, { useState } from 'react'
 import style from '../../pages/Home/Home.module.scss'
 import woman from '../../assets/Woman.png'
 import man from '../../assets/Man.png'
-import CompanySlider from '../../components/CompanySlider/CompanySlider';
 import Quiz from '../Quiz/Quiz';
 import SecondItem from '../Quiz/Items/SecondItem/SecondItem';
 import ThirdItem from '../Quiz/Items/ThirdItem/ThirdItem';
-import {useTranslation} from "react-i18next";
+import FouthItem from '../Quiz/Items/FouthItem/FouthItem';
+import { useTranslation } from "react-i18next";
+import Line from '../Line/Line';
 
-const CallbackBlock = ({blockRef2}) => {
+const CallbackBlock = ({ blockRef2 }) => {
     const [step, setStep] = useState(0)
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     const objSteps = {
         0: <Quiz step={step} setStep={setStep} />,
         1: <SecondItem setStep={setStep} />,
-        2: <ThirdItem setStep={setStep} />
+        2: <ThirdItem setStep={setStep} />,
+        3: <FouthItem setStep={setStep} />
     }
     const CurrentStep = objSteps[step]
 
     return (
         <div className={style.callbackBlock}>
+            {/* <div className={style.line1}/> */}
             {CurrentStep}
+            <div className={style.line} />
+            <div className={style.wrappedTitle}>
+                <p className={style.headerText}><span>{t("A RANGE OF SERVICES FOR SEARCH, BUYOUT")}</span>{t(" AND SHIPPING THE GOODS TO YOUR COUNTRY")}</p>
+            </div>
             <div className={style.searchPostavshikovBlock} ref={blockRef2}>
                 <img src={woman} alt="/" />
                 <div className={style.wrapper}>
@@ -79,7 +86,6 @@ const CallbackBlock = ({blockRef2}) => {
                 </div>
                 <img src={man} alt="/" />
             </div>
-            {/* <CompanySlider /> */}
         </div>
     )
 }

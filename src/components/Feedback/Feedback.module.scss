@@ -6,8 +6,8 @@
 
     .headerText {
         color: #333A59;
-        font-size: 23px;
-        line-height: 33px;
+        font-size: 40px;
+        line-height: 35px;
         font-weight: 800;
 
         span {
@@ -34,25 +34,29 @@
 
             h3 {
                 color: #091133;
-                font-size: 26px;
+                font-size: 31px;
                 line-height: 40px;
             }
 
             .callbackbtn {
                 margin-top: 10px;
-                border-radius: 20px;
-                width: 100%;
+                border-radius: 52px;
+                width: 90%;
                 height: 60px;
                 cursor: pointer;
                 outline: none;
+                font-weight: bold;
                 border: none;
                 background-color: #0038FF !important;
                 color: white;
                 transition: .1s;
             }
-
+            .callbackbtn:hover {
+                background-color: #0031e4 !important;
+            }
             .callback {
-                font-size: 16px;
+                text-align: left;
+                font-size: 14.5px;
                 color: #091133;
                 margin-bottom: 10px;
                 margin-top: 10px;
@@ -102,6 +106,12 @@
     }
 }
 
+.currentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .input {
     button {
         background-color: white !important;
@@ -116,17 +126,16 @@
     margin-top: 10px;
     width: 100%;
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
-
     button {
         background-color: white !important;
-        height: 40px !important;
+        height: 50px !important;
         border: none;
         border-radius: 0%;
     }
 
     input {
         width: 100% !important;
-        height: 40px !important;
+        height: 50px !important;
         border: none !important;
         outline: none;
         box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
@@ -137,17 +146,7 @@
 
 .nameInput {
     width: 100% !important;
-    height: 40px !important;
-    border: none !important;
-    outline: none;
-    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);
-    padding: 10px !important;
-    border-radius: 5px !important;
-}
-
-.name {
-    width: 100% !important;
-    height: 40px !important;
+    height: 50px !important;
     border: none !important;
     outline: none;
     box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.1);

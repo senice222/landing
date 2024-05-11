@@ -2,32 +2,23 @@ import React, { useState } from 'react'
 import style from '.././SecondItem/SecondItem.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { setArranges } from '../../../../store/slices/ConsultSlice'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import axios from 'axios';
 import { notification } from 'antd';
 
-const ThirdItem = ({setStep}) => {
+const ThirdItem = ({ setStep }) => {
     const [radioValue, setRadioValue] = useState("")
     const dispatch = useDispatch()
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     const data = useSelector(state => state)
+
     const handleChange = (e) => {
-        setRadioValue(e.target.value)
+        dispatch(setArranges(e.target.value))
     }
-    console.log(data)
-    const handleSend = async () => {   
-        dispatch(setArranges(radioValue))
-        try {
-            // await axios.post("http://localhost:3030/api/quiz-contacts-modal", newObj)
-            notification.success({
-                duration: 4,
-                message: t("Success."),
-                description: t("The application has been successfully sent."),
-            })
-            setStep(0)
-        } catch (e) {
-            console.log(e)
-        }
+
+    const handleNext = async () => {
+        // await axios.post("http://localhost:3030/api/quiz-contacts-modal", newObj)
+        setStep((prev) => prev += 1)
     }
 
     return (
@@ -43,16 +34,16 @@ const ThirdItem = ({setStep}) => {
                 <div className={style.labelDiv}>
                     <label className={style.radio}>
                         <input name="radio" type="radio" value={"Да, устраивает"} onChange={(e) => handleChange(e)} defaultChecked />
-                        <span style={{fontSize: "18.6px"}}>{t("Yes, I am")}</span>
+                        <span style={{ fontSize: "18.6px" }}>{t("Yes, I am")}</span>
                     </label>
                     <label className={style.radio}>
                         <input name="radio" value={"Нет, хотел бы осудить варианты"} onChange={(e) => handleChange(e)} type="radio" />
-                        <span style={{fontSize: "18.5px", width: "340px"}}>{t("No, I would like to discuss options")}</span>
+                        <span style={{ fontSize: "18.5px", width: "340px" }}>{t("No, I would like to discuss options")}</span>
                     </label>
                 </div>
                 <div className={style.btns}>
                     <button className={style.backBtn} onClick={() => setStep(prev => prev -= 1)}>{t("Back")}</button>
-                    <button className={style.nextBtn} onClick={handleSend} style={{fontSize: "15px"}}>{t("Send request")}</button>
+                    <button className={style.nextBtn} onClick={handleNext} style={{ fontSize: "15px" }}>{t("Next")}</button>
                 </div>
             </div>
         </>

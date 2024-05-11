@@ -28,8 +28,10 @@ const Quiz = ({ step, setStep }) => {
                 </p>
             </div>
             <div className={style.answerFewQuestions}>
-                <p>{t("Name of the product to be found ?")}</p>
-                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter the product you need to find")} />
+                <div>
+                    <p>{t("Name of the product to be found ?")}</p>
+                    <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter the product you need to find")} />
+                </div>
                 <div className={style.btns}>
                     {error && <p className={style.error}>{t("Fill in the field at the top.")}</p>}
                     <p></p>

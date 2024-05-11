@@ -37,8 +37,8 @@ const Feedback = () => {
             <div className={style.wrapper}>
                 <div className={style.form}>
                     <h3>{t("Leave your contacts")}</h3>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <p className={style.callback}>{t("We will contact you within ")}<span className={style.coupleOfHourse}>{t("few hours")}</span></p>
+                    <p className={style.callback}>{t("We will contact you within ")}<span className={style.coupleOfHourse}>{t("few hours")}</span></p>
+                    <form onSubmit={handleSubmit(onSubmit)} className={style.currentForm}>
                         <input type="text" className={style.nameInput} placeholder={t("Enter your name")}
                                {...register("name", { required: t("Enter your name"), pattern: {
                                        value: /^[^\d]+$/,
@@ -56,7 +56,7 @@ const Feedback = () => {
                             }}
                         />
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
-                        <input type="text" className={style.name} placeholder={t("Enter your convenient messenger")} {...register("messenger", { required: true })} />
+                        <input type="text" className={style.nameInput} style={{marginTop: "15px"}} placeholder={t("Enter your convenient messenger")} {...register("messenger", { required: true })} />
                         {errors.messenger && <p className={style.error}>{t("Enter your convenient messenger")}</p>}
                         <button type="submit" className={style.callbackbtn}>{t("Contact me")}</button>
                     </form>

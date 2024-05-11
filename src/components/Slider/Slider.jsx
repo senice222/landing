@@ -7,11 +7,11 @@ import fouthPerson from "../../assets/Rectangle 16 (3).png";
 import fifthPerson from "../../assets/Rectangle 16 (4).png";
 
 import { Carousel } from 'antd';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 
 const Slider = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <>
@@ -78,7 +78,12 @@ const Slider = () => {
                         </div>
                     </div>
                 </Carousel>
+                <div className={style.wrappLine}>
+                    <div className={style.line} />
+                </div>
             </div>
+            {/* <div className={style.line}/> */}
+
         </>
     );
 };
