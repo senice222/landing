@@ -22,6 +22,9 @@ const Quiz = ({ step, setStep }) => {
     return (
         <div className={style.quiz}>
             <div className={style.titleHeaderAnswer}>
+                <div className={style.wrappLine}>
+                    <div className={style.line} />
+                </div>
                 <p>
                     {t("ANSWER A FEW QUESTIONS SO THAT'SO")}
                     <span><br />{t(" WE CAN SEE HOW WE CAN HELP YOU.")}</span>

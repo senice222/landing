@@ -85,7 +85,7 @@
 
   .searchPostavshikovBlock {
     display: flex;
-    margin-top: 70px;
+    margin-top: 31px;
     max-width: 900px;
 
     img {
@@ -289,12 +289,11 @@
   .infoDiv {
     width: 100%;
     flex-direction: column;
-
-    div {
-      margin-top: 30px;
-    }
+    margin-top: 0px !important;
   }
-
+  .infoDiv > div:not(:first-of-type) {
+    margin-top: 30px;
+  }
   .searchPostavshikovBlock {
     justify-content: center;
 
@@ -341,8 +340,13 @@
 
 @media (max-width: 768px) {
   .headerText {
-    width: 95vw;
-    font-size: 25px !important;
+    width: 90vw;
+    font-size: 19px !important;
+    letter-spacing: -1px;
+  }
+
+  .wrappedTitle {
+    margin-top: 35px !important
   }
 
   .searchPostavshikovBlock {

@@ -7,7 +7,6 @@ import SecondItem from '../Quiz/Items/SecondItem/SecondItem';
 import ThirdItem from '../Quiz/Items/ThirdItem/ThirdItem';
 import FouthItem from '../Quiz/Items/FouthItem/FouthItem';
 import { useTranslation } from "react-i18next";
-import Line from '../Line/Line';
 
 const CallbackBlock = ({ blockRef2 }) => {
     const [step, setStep] = useState(0)

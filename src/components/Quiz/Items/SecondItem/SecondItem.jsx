@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from './SecondItem.module.scss'
 import { useDispatch } from 'react-redux'
 import { setHowFast } from '../../../../store/slices/ConsultSlice'

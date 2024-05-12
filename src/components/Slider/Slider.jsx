@@ -78,12 +78,8 @@ const Slider = () => {
                         </div>
                     </div>
                 </Carousel>
-                <div className={style.wrappLine}>
-                    <div className={style.line} />
-                </div>
             </div>
             {/* <div className={style.line}/> */}
-
         </>
     );
 };
