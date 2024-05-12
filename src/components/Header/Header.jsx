@@ -1,31 +1,28 @@
 import React from 'react'
 import s from './Header.module.scss'
-import {useNavigate} from "react-router-dom";
 import lushi from '../../assets/Group 14.png'
 import rus from '../../assets/flag-for-flag-russia-svgrepo-com.png'
 import us from '../../assets/flag-us-svgrepo-com.png'
-import {parseCookies, setCookie} from "nookies";
-import {useTranslation} from "react-i18next";
+import { parseCookies, setCookie } from "nookies";
+import { useTranslation } from "react-i18next";
 import burger from '../../assets/free-icon-menu-4254068.png'
 
-const HeaderResponsive = ({setModal}) => {
-    const navigate = useNavigate()
-    const {lang} = parseCookies()
+const HeaderResponsive = ({ setModal, blockRef6, scrollTo }) => {
+    const { lang } = parseCookies()
 
     return (
         <div className={s.responsiveHeaderWrapper}>
             <div className={s.responsiveHeader}>
                 <div onClick={() => setModal(true)} className={s.burgerIcon}>
-                    <img src={burger} alt="menu" className={s.menu}/>
+                    <img src={burger} alt="menu" className={s.menu} />
                 </div>
-                <div className={s.imgDiv}>
-                    <img src={lushi} className={s.image2} alt={"logo"}
-                         onClick={() => navigate('/')}/>
+                <div className={s.imgDiv} onClick={() => scrollTo(blockRef6?.current)} >
+                    <img src={lushi} className={s.image2} alt={"logo"} />
                 </div>
                 <div className={s.textLang}>
                     <div className={s.imgs}>
-                        <img className={s.ru} src={rus} alt={"/"}/>
-                        <img src={us} alt={"/"}/>
+                        <img className={s.ru} src={rus} alt={"/"} />
+                        <img src={us} alt={"/"} />
                     </div>
                     <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
                         setCookie(null, 'lang', "ru", {
@@ -47,16 +44,15 @@ const HeaderResponsive = ({setModal}) => {
 }
 
 
-const Header = ({setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5}) => {
-    const navigate = useNavigate()
-    const {t} = useTranslation()
-    const {lang} = parseCookies()
+const Header = ({ setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5, blockRef6 }) => {
+    const { t } = useTranslation()
+    const { lang } = parseCookies()
 
     return (
         <>
             <div className={s.headerWrapper}>
                 <div className={s.headerDiv}>
-                    <img src={lushi} className={s.image} alt={"logo"} onClick={() => navigate('/')}/>
+                    <img src={lushi} className={s.image} alt={"logo"} />
                     <div className={s.links}>
                         <a onClick={() => scrollTo(blockRef1.current)}>{t("About company")}</a>
                         <a onClick={() => scrollTo(blockRef2.current)}>{t("Services")}</a>
@@ -66,11 +62,11 @@ const Header = ({setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4,
                     </div>
                     <div className={s.langDiv}>
                         <div className={s.imgs}>
-                            <img src={rus} alt={"/"}/>
-                            <img className={s.us} src={us} alt={"/"}/>
+                            <img src={rus} alt={"/"} />
+                            <img className={s.us} src={us} alt={"/"} />
                         </div>
                         <div className={s.textLang}>
-                        <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
+                            <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
                                 setCookie(null, 'lang', "ru", {
                                     path: '/'
                                 })
@@ -89,8 +85,7 @@ const Header = ({setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4,
             </div>
             <HeaderResponsive
                 setModal={setModal}
-                blockRef1={blockRef1} blockRef2={blockRef2} blockRef3={blockRef3} blockRef4={blockRef4}
-                blockRef5={blockRef5}
+                blockRef6={blockRef6}
                 scrollTo={scrollTo}
             />
         </>

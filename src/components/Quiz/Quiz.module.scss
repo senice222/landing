@@ -126,7 +126,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 443px) {
   .quiz {
     margin-top: 200px !important;
   }
@@ -153,7 +153,8 @@
     width: 100%;
     margin-top: 103px;
     p {
-      font-size: 26px;
+      font-size: 25px;
+      letter-spacing: -1px;
     }
   }
   .answerFewQuestions {

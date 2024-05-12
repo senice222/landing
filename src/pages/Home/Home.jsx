@@ -22,17 +22,18 @@ const Home = () => {
     const blockRef3 = useRef(null)
     const blockRef4 = useRef(null)
     const blockRef5 = useRef(null)
+    const blockRef6 = useRef(null)
     const scrollTo = (target) => gsap.to(window, {duration: 1, scrollTo: target})
 
     return (
         <Layout
             blockRef1={blockRef1} blockRef2={blockRef2} blockRef3={blockRef3} blockRef4={blockRef4}
-            blockRef5={blockRef5}
+            blockRef5={blockRef5} blockRef6={blockRef6}
             scrollTo={scrollTo}
         >
             <FeedbackModal modal={modal} setModal={setModal}/>
             <div className={style.container}>
-                <TopComponent setModal={setModal}/>
+                <TopComponent setModal={setModal} blockRef6={blockRef6}/>
                 <AboutCompany blockRef1={blockRef1}/>
                 <Slider/>
                 <CallbackBlock blockRef2={blockRef2}/>

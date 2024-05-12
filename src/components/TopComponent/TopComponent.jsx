@@ -11,7 +11,7 @@ import tg from '../../assets/telegram-svgrepo-com.png'
 import inst from '../../assets/instagram-svgrepo-com.png'
 import viber from '../../assets/viber-svgrepo-com.png'
 
-const TopComponent = ({setModal}) => {
+const TopComponent = ({setModal, blockRef6}) => {
     const {t} = useTranslation()
 
     return (

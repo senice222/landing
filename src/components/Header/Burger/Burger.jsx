@@ -1,6 +1,6 @@
 import s from './Burger.module.scss'
 
-const BurgerModal = ({opened, setOpened, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5}) => {
+const BurgerModal = ({opened, setOpened, scrollTo, blockRef1, blockRef2, blockRef4, blockRef5}) => {
 
     return (
         <div onClick={(prev) => setOpened(!prev)} className={`${s.bgModal} ${opened ? s.opened : ""}`}>
