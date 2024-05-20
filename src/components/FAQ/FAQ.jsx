@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from './FAQ.module.scss'
 import { Arrow } from "../Header/Svgs";
 import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion'
 
 const FAQ = ({ blockRef4 }) => {
     const [firstOpen, setFirstOpen] = useState(false)
@@ -9,11 +10,14 @@ const FAQ = ({ blockRef4 }) => {
     const [thirdOpen, setThirdOpen] = useState(false)
     const [fouthOpen, setFourthOpen] = useState(false)
     const { t } = useTranslation()
+
+
     return (
         <div className={style.faq} ref={blockRef4}>
-            <div className={style.title}>
+            <motion.div
+                className={style.title}>
                 <p>{t("Frequently Asked Questions ")}<span>{t("questions")}</span></p>
-            </div>
+            </motion.div>
             <div className={style.item} onClick={() => setFirstOpen((firstOpen) => !firstOpen)} style={{ borderTop: "1px solid black" }}>
                 <div className={style.wrapp}>
                     <p>{t("How much do your services cost, what % is the commission?")}</p>

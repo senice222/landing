@@ -2,6 +2,7 @@ import React from 'react'
 import style from './AboutCompany.module.scss'
 import img from '../../assets/персонаж о компании.png'
 import { useTranslation } from 'react-i18next'
+import {motion} from 'framer-motion'
 
 const AboutCompany = ({ blockRef1 }) => {
     const { t } = useTranslation()
@@ -9,7 +10,11 @@ const AboutCompany = ({ blockRef1 }) => {
 
         <>
             <div className={style.container} ref={blockRef1}>
-                <div className={style.text}>
+                <motion.div className={style.text}
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <p className={style.title}>{t("ABOUT THE COMPANY")}</p>
                     <p className={style.descr}>
                         {t("We are pleased to welcome you to the company ")} <span>"LUSHI"</span> {t(" - your reliable partner in international trade!")}
@@ -20,10 +25,14 @@ const AboutCompany = ({ blockRef1 }) => {
                     <p className={style.descr}>
                         {t("Founder of the company ")} <span>"LUSHI"</span> {t(" has been working for over 10 years in the field of international trade with China. This guarantees high level of experience and professionalism of our team. In addition, his ownership of a major transport company in China. called ‘LMT International Logistics Services Co., Ltd.’, ensures the ability to provide reliable services and competitive rates in the logistics industry.")}
                     </p>
-                </div>
-                <div className={style.imgDiv}>
+                </motion.div>
+                <motion.div className={style.imgDiv}
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <img src={img} alt='/' />
-                </div>
+                </motion.div>
             </div>
             <div className={style.line}/>
         </>

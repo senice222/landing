@@ -7,6 +7,7 @@ import SecondItem from '../Quiz/Items/SecondItem/SecondItem';
 import ThirdItem from '../Quiz/Items/ThirdItem/ThirdItem';
 import FouthItem from '../Quiz/Items/FouthItem/FouthItem';
 import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion'
 
 const CallbackBlock = ({ blockRef2 }) => {
     const [step, setStep] = useState(0)
@@ -25,11 +26,27 @@ const CallbackBlock = ({ blockRef2 }) => {
             {CurrentStep}
             <div className={style.line} />
             <div className={style.wrappedTitle}>
-                <p className={style.headerText}><span>{t("A RANGE OF SERVICES FOR SEARCH, BUYOUT")}</span>{t(" AND SHIPPING THE GOODS TO YOUR COUNTRY")}</p>
+                <motion.p
+                    className={style.headerText}
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
+                    <span>{t("A RANGE OF SERVICES FOR SEARCH, BUYOUT")}</span>{t(" AND SHIPPING THE GOODS TO YOUR COUNTRY")}
+                </motion.p>
             </div>
             <div className={style.searchPostavshikovBlock} ref={blockRef2}>
-                <img src={woman} alt="/" />
-                <div className={style.wrapper}>
+                <motion.img
+                    src={woman} alt="/"
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                />
+                <motion.div className={style.wrapper}
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <div className={style.list}>
                         <h4>{t("Finding reliable suppliers")}</h4>
                         <ul>
@@ -52,13 +69,18 @@ const CallbackBlock = ({ blockRef2 }) => {
                             <li>{t("We will ensure delivery of the finished goods to the place specified by you.")}</li>
                         </ul>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className={style.line}>
                 <div />
             </div>
             <div className={style.secondBlockPostavshiki}>
-                <div className={style.wrapper}>
+                <motion.div
+                    className={style.wrapper}
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <div className={style.list}>
                         <h4 className={style.titleList}>{t("Buyback of goods and quality inspection")}</h4>
                         <ul>
@@ -82,8 +104,14 @@ const CallbackBlock = ({ blockRef2 }) => {
                             <li>{t("We guarantee that your shipment will be delivered safely and securely and you will receive it on time.")}</li>
                         </ul>
                     </div>
-                </div>
-                <img src={man} alt="/" />
+                </motion.div>
+                <motion.img
+                    src={man}
+                    alt="/"
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                />
             </div>
         </div>
     )

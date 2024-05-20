@@ -5,15 +5,16 @@ import Line from '../../components/Line/Line'
 import { useForm } from 'react-hook-form';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import axios from "axios";
-import {notification} from "antd";
+import { notification } from "antd";
+import { motion } from 'framer-motion'
 
 const Feedback = () => {
     const [phone, setPhone] = useState("")
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const {t} = useTranslation()
-    
+    const { t } = useTranslation()
+
     const onSubmit = async (data) => {
         try {
             await axios.post("http://localhost:3030/api/feedback-modal", data)
@@ -31,19 +32,30 @@ const Feedback = () => {
 
     return (
         <div className={style.feedBackBlock}>
-            <div className={style.wrappedTitle}>
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                className={style.wrappedTitle}>
                 <p className={style.headerText}><span>{t("WE'LL DO A FREE ESTIMATE ")}</span>{t("THE COST OF PURCHASE AND DELIVERY TO YOUR COUNTRY")}</p>
-            </div>
+            </motion.div>
             <div className={style.wrapper}>
-                <div className={style.form}>
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                    className={style.form}
+                >
                     <h3>{t("Leave your contacts")}</h3>
                     <p className={style.callback}>{t("We will contact you within ")}<span className={style.coupleOfHourse}>{t("few hours")}</span></p>
                     <form onSubmit={handleSubmit(onSubmit)} className={style.currentForm}>
                         <input type="text" className={style.nameInput} placeholder={t("Enter your name")}
-                               {...register("name", { required: t("Enter your name"), pattern: {
-                                       value: /^[^\d]+$/,
-                                       message: t("Name cannot contain numbers")
-                                   }  })}
+                            {...register("name", {
+                                required: t("Enter your name"), pattern: {
+                                    value: /^[^\d]+$/,
+                                    message: t("Name cannot contain numbers")
+                                }
+                            })}
                         />
                         {errors.name && <p className={style.error}>{errors.name.message}</p>}
                         <PhoneInput
@@ -56,12 +68,16 @@ const Feedback = () => {
                             }}
                         />
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
-                        <input type="text" className={style.nameInput} style={{marginTop: "15px"}} placeholder={t("Enter your convenient messenger")} {...register("messenger", { required: true })} />
+                        <input type="text" className={style.nameInput} style={{ marginTop: "15px" }} placeholder={t("Enter your convenient messenger")} {...register("messenger", { required: true })} />
                         {errors.messenger && <p className={style.error}>{t("Enter your convenient messenger")}</p>}
                         <button type="submit" className={style.callbackbtn}>{t("Contact me")}</button>
                     </form>
-                </div>
-                <div className={style.priceReasonDiv}>
+                </motion.div>
+                <motion.div
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                    className={style.priceReasonDiv}>
                     <div className={style.content}>
                         <div className={style.reasonHeader}>
                             <h3>{t("WHAT EXACTLY DOES THE PRICE DEPEND ON?")}</h3>
@@ -73,7 +89,7 @@ const Feedback = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <Line />
         </div>

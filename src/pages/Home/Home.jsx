@@ -9,13 +9,11 @@ import FAQ from '../../components/FAQ/FAQ';
 import gsap from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import FeedbackModal from '../../components/Modals/FeedbackModal/FeedbackModal';
-import {useTranslation} from "react-i18next";
 import AboutCompany from '../../components/AboutCompany/AboutCompany';
 import TopComponent from '../../components/TopComponent/TopComponent';
 
 const Home = () => {
     const [modal, setModal] = useState(false)
-    const {t} = useTranslation()
     gsap.registerPlugin(ScrollToPlugin)
     const blockRef1 = useRef(null)
     const blockRef2 = useRef(null)

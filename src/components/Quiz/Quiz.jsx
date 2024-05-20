@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setProductName } from '../../store/slices/ConsultSlice';
 import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion'
 
 const Quiz = ({ step, setStep }) => {
     const [value, setValue] = useState('')
@@ -25,12 +26,20 @@ const Quiz = ({ step, setStep }) => {
                 <div className={style.wrappLine}>
                     <div className={style.line} />
                 </div>
-                <p>
+                <motion.p
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     {t("ANSWER A FEW QUESTIONS SO THAT'SO")}
                     <span><br />{t(" WE CAN SEE HOW WE CAN HELP YOU.")}</span>
-                </p>
+                </motion.p>
             </div>
-            <div className={style.answerFewQuestions}>
+            <motion.div
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                className={style.answerFewQuestions}>
                 <div>
                     <p>{t("Name of the product to be found ?")}</p>
                     <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter the product you need to find")} />
@@ -41,7 +50,7 @@ const Quiz = ({ step, setStep }) => {
                     {step !== 0 && <button className={style.backBtn}>{t("Back")}</button>}
                     <button className={style.nextBtn} onClick={handleNextStep}>{t("Next")}</button>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

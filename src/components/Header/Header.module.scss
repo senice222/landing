@@ -306,6 +306,7 @@
     display: flex;
     z-index: 100;
     position: fixed;
+    justify-content: space-between;
     width: 100vw;
   }
 
@@ -447,12 +448,22 @@
 .topItems {
   display: flex;
 }
-@media (max-width: 970px) {
+@media (max-width: 768px) {
   .imgs {
     display: none;
   }
   .textLang {
     //margin-left: -60px;
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 970px) {
+  .imgs {
+    display: none;
+  }
+  .textLang {
+    //margin-left: -60px;
+    margin-right: 30px;
   }
 }

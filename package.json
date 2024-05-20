@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.16.4",
     "axios": "^1.6.8",
+    "framer-motion": "^11.2.4",
     "gsap": "^3.12.5",
     "i18next": "^23.11.2",
     "i18next-browser-languagedetector": "^7.2.1",

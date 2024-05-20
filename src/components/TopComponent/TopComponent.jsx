@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../../pages/Home/Home.module.scss'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import lushiBg from '../../assets/Group 8.png'
 import conveyor from '../../assets/belt-conveyor-1-svgrepo-com 1.png'
 import box from '../../assets/box-1-svgrepo-com 1.png'
@@ -10,35 +10,71 @@ import globus from '../../assets/planet-svgrepo-com 1.png'
 import tg from '../../assets/telegram-svgrepo-com.png'
 import inst from '../../assets/instagram-svgrepo-com.png'
 import viber from '../../assets/viber-svgrepo-com.png'
+import { motion } from 'framer-motion'
 
-const TopComponent = ({setModal, blockRef6}) => {
-    const {t} = useTranslation()
+const TopComponent = ({ setModal }) => {
+    const { t } = useTranslation()
 
     return (
         <>
-            <img className={style.img} src={lushiBg} alt="/" />
+            <motion.div
+                className={style.imgDiv}
+            // initial={{ x: -100, opacity: 0 }}
+            // whileInView={{ x: 0, opacity: 1 }}
+            // animate={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+            >
+                <img
+                    className={style.img} src={lushiBg} alt="/"
+                />
+            </motion.div>
             <div className={style.textDiv}>
-                <p>International trading company</p>
+                <motion.p
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
+                    International trading company
+                </motion.p>
             </div>
             <div className={style.infoDiv}>
-                <div>
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <img src={conveyor} className={style.conveyor} alt="/" />
                     <p>{t("Production of customised goods")}</p>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <img src={box} alt="/" />
                     <p>{t("Redemption of goods and quality check")}</p>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <img src={globus} alt="/" />
                     <p className={style.searchManufaktura}>{t("Search for a manufacturer")}</p>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                >
                     <img src={truck} alt="/" />
                     <p>{t("Fast and reliable delivery of goods")}</p>
-                </div>
+                </motion.div>
             </div>
-            <div className={style.socialsDiv}>
+            <motion.div className={style.socialsDiv}
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+            >
                 <div className={style.iconDiv}>
                     <img src={tg} alt="/" />
                 </div>
@@ -48,10 +84,14 @@ const TopComponent = ({setModal, blockRef6}) => {
                 <div className={style.iconDiv}>
                     <img src={viber} alt="/" />
                 </div>
-            </div>
-            <div className={style.btnDiv}>
+            </motion.div>
+            <motion.div className={style.btnDiv}
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+            >
                 <button onClick={() => setModal(true)}>{t("Discuss the interaction")}</button>
-            </div>
+            </motion.div>
         </>
     )
 }

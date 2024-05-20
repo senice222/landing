@@ -46,8 +46,8 @@ const Slider = () => {
                             <img src={thirdPerson} alt="/" />
                         </div>
                         <div className={style.informationSliderDiv}>
-                            <h3>{t("Xing Kaizheng")}</h3>
-                            <p className={style.ceo}>{t("Head of Customer Relations Department")}</p>
+                            <h3>{t("Jiao Jianjian")}</h3>
+                            <p className={style.ceo}>{t("Founder of the international trading company LUSHI")}</p>
                             <p className={style.descr}>
                                 {t("And other successful businesses. With 15 years of experience in cross-border e-commerce and international trade, she is responsible for integrating resources to provide partners with a supply chain. Jiao Jianjian's philosophy is ‘fair and mutually beneficial co-operation’, which is reflected in the work of LUSHI.")}
                             </p>
