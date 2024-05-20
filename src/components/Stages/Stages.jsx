@@ -11,7 +11,7 @@ const Stages = () => {
         <>
             <div className={style.stagesContainer}>
                 <motion.h3
-                    initial={{ y: -100, opacity: 0 }}
+                    initial={{ y: -30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.1, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >{t("STAGES ")} <span>{t("INTERACTION")}</span></motion.h3>
