@@ -12,7 +12,7 @@ import inst from '../../assets/instagram-svgrepo-com.png'
 import viber from '../../assets/viber-svgrepo-com.png'
 import { motion } from 'framer-motion'
 
-const TopComponent = ({ setModal }) => {
+const TopComponent = ({ blockRef1, setModal }) => {
     const { t } = useTranslation()
 
     return (
@@ -87,7 +87,7 @@ const TopComponent = ({ setModal }) => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
             >
-                <button onClick={() => setModal(true)}>{t("Discuss the interaction")}</button>
+                <button ref={blockRef1} onClick={() => setModal(true)}>{t("Discuss the interaction")}</button>
             </motion.div>
         </>
     )

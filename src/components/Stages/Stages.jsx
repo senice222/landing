@@ -95,14 +95,14 @@ const Stages = () => {
 
                         className={style.item}>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             className={style.headerItem}
                         >
                             <h3>4</h3>
                             <motion.p
-                                initial={{ x: 100, opacity: 0 }}
+                                initial={{ x: -100, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             >
@@ -110,7 +110,7 @@ const Stages = () => {
                             </motion.p>
                         </motion.div>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             className={style.descr}>
@@ -119,14 +119,14 @@ const Stages = () => {
                     </div>
                     <div className={style.item}>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             className={style.headerItem}
                         >
                             <h3>5</h3>
                             <motion.p
-                                initial={{ x: 100, opacity: 0 }}
+                                initial={{ x: -100, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             >
@@ -134,7 +134,7 @@ const Stages = () => {
                             </motion.p>
                         </motion.div>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             className={style.descr}>
@@ -143,7 +143,7 @@ const Stages = () => {
                     </div>
                     <div className={style.item}>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             className={style.headerItem}
@@ -158,7 +158,7 @@ const Stages = () => {
                             </motion.p>
                         </motion.div>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
                             className={style.descr}>

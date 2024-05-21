@@ -31,8 +31,8 @@ const Home = () => {
         >
             <FeedbackModal modal={modal} setModal={setModal}/>
             <div className={style.container}>
-                <TopComponent setModal={setModal} blockRef6={blockRef6}/>
-                <AboutCompany blockRef1={blockRef1}/>
+                <TopComponent blockRef1={blockRef1} setModal={setModal} blockRef6={blockRef6}/>
+                <AboutCompany />
                 <Slider/>
                 <CallbackBlock blockRef2={blockRef2}/>
                 <Stages/>

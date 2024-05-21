@@ -4,12 +4,12 @@ import img from '../../assets/персонаж о компании.png'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
-const AboutCompany = ({ blockRef1 }) => {
+const AboutCompany = () => {
     const { t } = useTranslation()
+    
     return (
-
         <>
-            <div className={style.container} ref={blockRef1}>
+            <div className={style.container}>
                 <motion.div className={style.text}
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
