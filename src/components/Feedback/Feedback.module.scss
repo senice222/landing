@@ -166,7 +166,8 @@
 
 @media (max-width: 972px) {
     .content {
-        width: 370px !important;
+        max-width: 370px;
+        width: 90vw !important;
     }
     .wrappedTitle {
         // margin-top: 50px;
@@ -186,7 +187,7 @@
     }
 
     .content {
-        margin: 20px
+        margin: 35px;
     }
 
     .feedBackBlock {
