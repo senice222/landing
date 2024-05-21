@@ -129,9 +129,13 @@ const Stages = () => {
                                 {t("Redemption of goods")}
                             </motion.p>
                         </motion.div>
-                        <div className={style.descr}>
+                        <motion.div
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                            className={style.descr}>
                             {t("We buy a batch of goods from the manufacturer, after which the factory sends it to our warehouse. We accept the goods, make a record and send you a video review.")}
-                        </div>
+                        </motion.div>
                     </div>
                     <div className={style.item}>
                         <motion.div
@@ -149,9 +153,13 @@ const Stages = () => {
                                 {t("Checking and dispatch")}
                             </motion.p>
                         </motion.div>
-                        <div className={style.descr}>
+                        <motion.div
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                            className={style.descr}>
                             {t("We recalculate the goods, check for quality on request and send them to your country.")}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
