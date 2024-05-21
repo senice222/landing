@@ -43,7 +43,7 @@ const CallbackBlock = ({ blockRef2 }) => {
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 />
                 <motion.div className={style.wrapper}
-                    initial={{ x: 100, opacity: 0 }}
+                    initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >

@@ -185,12 +185,13 @@
     .priceReasonDiv {
         width: 380px;
         margin-left: 0px !important;
-        margin-right: 100px;
+        display: flex !important;
+        justify-content: center;
     }
 
     .content {
         margin-top: 35px;
-        margin-left: 50px;
+        width: 84vw !important;
     }
 
     .feedBackBlock {

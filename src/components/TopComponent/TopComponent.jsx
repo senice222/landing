@@ -51,7 +51,7 @@ const TopComponent = ({ blockRef1, setModal }) => {
                     <p>{t("Redemption of goods and quality check")}</p>
                 </motion.div>
                 <motion.div
-                    initial={{ x: 100, opacity: 0 }}
+                    initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >
@@ -59,7 +59,7 @@ const TopComponent = ({ blockRef1, setModal }) => {
                     <p className={style.searchManufaktura}>{t("Search for a manufacturer")}</p>
                 </motion.div>
                 <motion.div
-                    initial={{ x: 100, opacity: 0 }}
+                    initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >
@@ -68,7 +68,7 @@ const TopComponent = ({ blockRef1, setModal }) => {
                 </motion.div>
             </div>
             <motion.div className={style.socialsDiv}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
             >
@@ -83,7 +83,7 @@ const TopComponent = ({ blockRef1, setModal }) => {
                 </div>
             </motion.div>
             <motion.div className={style.btnDiv}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
             >
