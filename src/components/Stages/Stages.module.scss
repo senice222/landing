@@ -53,7 +53,7 @@
             }
         }
         .item:hover {
-            transform: scale(1.045);
+            transform: scale(1.045) !important;
         }
     }
 }
