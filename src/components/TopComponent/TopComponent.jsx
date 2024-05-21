@@ -19,9 +19,6 @@ const TopComponent = ({ setModal }) => {
         <>
             <motion.div
                 className={style.imgDiv}
-            // initial={{ x: -100, opacity: 0 }}
-            // whileInView={{ x: 0, opacity: 1 }}
-            // animate={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
             >
                 <img
                     className={style.img} src={lushiBg} alt="/"

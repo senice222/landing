@@ -2,7 +2,7 @@ import React from 'react'
 import style from './AboutCompany.module.scss'
 import img from '../../assets/персонаж о компании.png'
 import { useTranslation } from 'react-i18next'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const AboutCompany = ({ blockRef1 }) => {
     const { t } = useTranslation()
@@ -12,11 +12,16 @@ const AboutCompany = ({ blockRef1 }) => {
             <div className={style.container} ref={blockRef1}>
                 <motion.div className={style.text}
                     initial={{ x: -100, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
+                    whileInView={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >
-                    <p className={style.title}>{t("ABOUT THE COMPANY")}</p>
-                    <p className={style.descr}>
+                    <p
+                        
+                        className={style.title}>{t("ABOUT THE COMPANY")}</p>
+                    <p
+                        
+                        className={style.descr}
+                        >
                         {t("We are pleased to welcome you to the company ")} <span>"LUSHI"</span> {t(" - your reliable partner in international trade!")}
                     </p>
                     <p className={style.descr}>
@@ -34,7 +39,7 @@ const AboutCompany = ({ blockRef1 }) => {
                     <img src={img} alt='/' />
                 </motion.div>
             </div>
-            <div className={style.line}/>
+            <div className={style.line} />
         </>
     )
 }

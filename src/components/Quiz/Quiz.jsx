@@ -41,14 +41,27 @@ const Quiz = ({ step, setStep }) => {
                 transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 className={style.answerFewQuestions}>
                 <div>
-                    <p>{t("Name of the product to be found ?")}</p>
-                    <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter the product you need to find")} />
+                    <motion.p
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                    >{t("Name of the product to be found ?")}
+                    </motion.p>
+                    <motion.input
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                        value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter the product you need to find")} />
                 </div>
                 <div className={style.btns}>
                     {error && <p className={style.error}>{t("Fill in the field at the top.")}</p>}
                     <p></p>
                     {step !== 0 && <button className={style.backBtn}>{t("Back")}</button>}
-                    <button className={style.nextBtn} onClick={handleNextStep}>{t("Next")}</button>
+                    <motion.button
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                        className={style.nextBtn} onClick={handleNextStep}>{t("Next")}</motion.button>
                 </div>
             </motion.div>
         </div>

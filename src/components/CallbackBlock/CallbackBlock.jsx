@@ -47,7 +47,11 @@ const CallbackBlock = ({ blockRef2 }) => {
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >
-                    <div className={style.list}>
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                        className={style.list}>
                         <h4>{t("Finding reliable suppliers")}</h4>
                         <ul>
                             <li>
@@ -57,8 +61,12 @@ const CallbackBlock = ({ blockRef2 }) => {
                             <li>{t("We will talk to the factories to get the best price and agree favourable terms of cooperation for you.")}</li>
                             <li>{t("We will come with inspection to the factory")}</li>
                         </ul>
-                    </div>
-                    <div className={style.list}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                        className={style.list}>
                         <h4 className={style.titleList}>{t("Production of goods to individual order:")}</h4>
                         <ul>
                             <li>
@@ -68,7 +76,7 @@ const CallbackBlock = ({ blockRef2 }) => {
                             <li>{t("Проконтролируем этапы производства")}</li>
                             <li>{t("We will ensure delivery of the finished goods to the place specified by you.")}</li>
                         </ul>
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
             <div className={style.line}>
@@ -81,7 +89,11 @@ const CallbackBlock = ({ blockRef2 }) => {
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
                 >
-                    <div className={style.list}>
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                        className={style.list}>
                         <h4 className={style.titleList}>{t("Buyback of goods and quality inspection")}</h4>
                         <ul>
                             <li>
@@ -91,8 +103,12 @@ const CallbackBlock = ({ blockRef2 }) => {
                             <li>{t("Check for rejects.")}</li>
                             <li>{t("We will pack and prepare for dispatch.")}</li>
                         </ul>
-                    </div>
-                    <div className={style.list}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
+                        className={style.list}>
                         <h4 className={style.titleList}>{t("Fast and reliable delivery of goods")}</h4>
                         <ul>
                             <li>
@@ -103,7 +119,7 @@ const CallbackBlock = ({ blockRef2 }) => {
                             <li>{t("Provide shipment tracking so you can rest assured that your shipment is securely controlled and will arrive on time.")}</li>
                             <li>{t("We guarantee that your shipment will be delivered safely and securely and you will receive it on time.")}</li>
                         </ul>
-                    </div>
+                    </motion.div>
                 </motion.div>
                 <motion.img
                     src={man}
