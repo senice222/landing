@@ -19,7 +19,14 @@ const Stages = () => {
                     <motion.div
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                        transition={{
+                            delay: 0.4,
+                            x: { type: 'spring', stiffness: 60 },
+                            opacity: { duration: 0.2 },
+                            ease: "easeIn",
+                            duration: 1
+                        }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className={style.item}>
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
@@ -43,7 +50,14 @@ const Stages = () => {
                     <motion.div
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                        transition={{
+                            delay: 0.4,
+                            x: { type: 'spring', stiffness: 60 },
+                            opacity: { duration: 0.2 },
+                            ease: "easeIn",
+                            duration: 1
+                        }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className={style.item}>
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
@@ -67,7 +81,14 @@ const Stages = () => {
                     <motion.div
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                        transition={{
+                            delay: 0.4,
+                            x: { type: 'spring', stiffness: 60 },
+                            opacity: { duration: 0.2 },
+                            ease: "easeIn",
+                            duration: 1
+                        }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className={style.item}>
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
@@ -91,7 +112,14 @@ const Stages = () => {
                     <motion.div
                         initial={{ x: 100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                        transition={{
+                            delay: 0.4,
+                            x: { type: 'spring', stiffness: 60 },
+                            opacity: { duration: 0.2 },
+                            ease: "easeIn",
+                            duration: 1
+                        }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className={style.item}>
                         <motion.div
                             initial={{ x: 100, opacity: 0 }}
@@ -115,7 +143,14 @@ const Stages = () => {
                     <motion.div
                         initial={{ x: 100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                        transition={{
+                            delay: 0.4,
+                            x: { type: 'spring', stiffness: 60 },
+                            opacity: { duration: 0.2 },
+                            ease: "easeIn",
+                            duration: 1
+                        }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className={style.item}>
                         <motion.div
                             initial={{ x: 100, opacity: 0 }}
@@ -139,7 +174,14 @@ const Stages = () => {
                     <motion.div
                         initial={{ x: 100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 0.2 }, ease: "easeIn", duration: 1 }}
+                        transition={{
+                            delay: 0.4,
+                            x: { type: 'spring', stiffness: 60 },
+                            opacity: { duration: 0.2 },
+                            ease: "easeIn",
+                            duration: 1
+                        }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className={style.item}>
                         <motion.div
                             initial={{ x: 100, opacity: 0 }}
