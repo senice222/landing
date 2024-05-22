@@ -1,6 +1,6 @@
 import s from './Burger.module.scss'
 
-const BurgerModal = ({opened, setOpened, scrollTo, blockRef1, blockRef2, blockRef4, blockRef5}) => {
+const BurgerModal = ({ opened, setOpened, scrollTo, blockRef1, blockRef2, blockRef4, blockRef5 }) => {
 
     return (
         <div onClick={(prev) => setOpened(!prev)} className={`${s.bgModal} ${opened ? s.opened : ""}`}>
@@ -32,8 +32,8 @@ const BurgerModal = ({opened, setOpened, scrollTo, blockRef1, blockRef2, blockRe
                         }}>Контакты</a>
                     </div>
                 </div>
-                <div className={s.bottom}>
-                    <div className={s.line}/>
+                <div className={s.bottom} onClick={() => window.location.href = 'tel:+375291384557'}>
+                    <div className={s.line} />
                     <div className={s.catalog}>Наш номер телефона</div>
                     <h1 className={s.number}>+375(000) - 00 - 00</h1>
                 </div>

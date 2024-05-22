@@ -82,11 +82,8 @@ const FeedbackModal = ({modal, setModal}) => {
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
                     </div>
                     <input type="text" className={style.socialInput} placeholder={t("Enter your messenger")}
-                           {...register("messengerInfo", {
-                               required: t("Enter your messenger")
-                           })}
+                           {...register("messengerInfo")}
                     />
-                    {errors.messengerInfo && <p className={style.error}>{errors.messengerInfo.message}</p>}
                     <div className={style.socials}>
                         <p>{t("Select a social network for communication")}</p>
                         <div className={style.icons}>

@@ -7,7 +7,7 @@ import inst from '../../assets/instagram-svgrepo-com (1).png'
 import viber from '../../assets/viber-svgrepo-com (1).png'
 import { useTranslation } from "react-i18next";
 
-const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2}) => {
+const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2 }) => {
     // СДЕЛАТЬ ДИПЛИНКИ
     const { t } = useTranslation()
 
@@ -18,20 +18,24 @@ const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2}) => {
                     <div className={style.firstBlock}>
                         <img src={lushi} alt="/" />
                         <div className={style.info}>
-                            <p>{t("Mail")}: lushi.minsk@gmail.com</p>
-                            <p>{t("Phone:")} +375(000) - 00 - 00</p>
-                            <p>Tel:4008001187</p>
-                            <p>{t("Accepting applications:")} 24/7</p>
+                            <p>{t("Limited Liability Company \"Lushi International Trading Company Registration number 193684755\"")}</p>
+
                         </div>
                     </div>
                     <div className={style.secondBlock}>
                         <img src={map} alt="/" />
-                        <p>
-                            <span>8th Floor, Unit 1, Building 8, Phase 1,
-                                Chengfa Jindai Smart Industrial Park</span> <br/>
-                            ,Zhengzhou, Lumaotong (LMT) International
-                            Logistics Group
-                        </p>
+                        <div>
+                            <p>
+                                <span>8th Floor, Unit 1, Building 8, Phase 1,
+                                    Chengfa Jindai Smart Industrial Park</span> <br />
+                                ,Zhengzhou, Lumaotong (LMT) International
+                                Logistics Group
+                            </p>
+                            <p>
+                                <span>220089, Московский район, г. Минск, ул. Железнодорожная, д. 33А,</span> <br />
+                                каб. 402 (кабинет 2-19)
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className={style.bottomSide}>

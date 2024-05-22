@@ -29,7 +29,8 @@ const FAQ = ({ blockRef4 }) => {
                 {
                     firstOpen && (
                         <div className={style.information}>
-                            <p>{t("Searching up to 3 products is free of charge, then for each product $3 . - Our commission from 5% to 10% depending on the amount of goods and complexity of the work.")}
+                            <p>
+                                {t("Searching up to 3 products is free of charge, then for each product $3 . - If you meet the minimum threshold of $5,000 or more, our commission ranges from 3% to 12% depending on the amount and complexity of the work. If the purchase price is below the minimum threshold of $5,000, our minimum commission is $600.")}
                             </p>
                         </div>
                     )

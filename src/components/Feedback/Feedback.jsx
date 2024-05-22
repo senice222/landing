@@ -70,7 +70,7 @@ const Feedback = () => {
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
                         <input type="text" className={style.nameInput} style={{ marginTop: "15px" }} placeholder={t("Enter your convenient messenger")} {...register("messenger", { required: true })} />
                         {errors.messenger && <p className={style.error}>{t("Enter your convenient messenger")}</p>}
-                        <button type="submit" className={style.callbackbtn}>{t("Contact me")}</button>
+                        <button type="submit" className={style.callbackbtn}>{t("Leave a request")}</button>
                     </form>
                 </motion.div>
                 <motion.div
@@ -80,7 +80,7 @@ const Feedback = () => {
                     className={style.priceReasonDiv}>
                     <div className={style.content}>
                         <div className={style.reasonHeader}>
-                            <h3>{t("WHAT EXACTLY DOES THE PRICE DEPEND ON?")}</h3>
+                            <h3>{t("A partnership that delivers value!")}</h3>
                             <img src={money} alt="/" />
                         </div>
                         <div className={style.someText}>

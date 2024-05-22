@@ -87,7 +87,7 @@ const TopComponent = ({ blockRef1, setModal }) => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
             >
-                <button ref={blockRef1} onClick={() => setModal(true)}>{t("Discuss the interaction")}</button>
+                <button ref={blockRef1} onClick={() => setModal(true)}>{t("Leave a request")}</button>
             </motion.div>
         </>
     )

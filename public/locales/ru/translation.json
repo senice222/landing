@@ -15,7 +15,7 @@
   " - your reliable partner in international trade!": " - вашем надежном партнере в международной торговле!",
   "Company ": "Компания ",
   "CEO of the Company": "CEO Компании",
-
+  "Limited Liability Company \"Lushi International Trading Company Registration number 193684755\"": "Общество с ограниченной ответственностью «Международная торговая компания Луши» Регистрационный номер 193684755",
   " provides a range of services for companies and entrepreneurs, from finding a reliable manufacturer.and purchase of goods and finishing with delivery of goods to your country. Also, the company has close business relations with a lot of factories in China, capable of manufacturing goods on individual orders.": " предоставляет комплекс услуг для компаний и предпринимателей, начиная с поиска надежного производителяи выкупа товара и заканчивая доставкой товара в вашу страну. Также компания имеем тесные деловые связи с множеством фабрик в Китае, способных выполнять производство товаров по индивидуальным заказам.",
   "We'll be in touch with you within a few hours and answer any questions you may have": "Мы свяжемся с вами в течение нескольких часов и ответим на все вопросы",
   "Responsible for the development of strategic goals. Manages the company's operational activities, including control over business processes and resources, financial resources management.": "Отвечает за разработку стратегических целей. Управляет операционной деятельностью компании, включая контроль над бизнес-процессами и ресурсами, управление финансовыми ресурсами.",
@@ -108,8 +108,8 @@
   "How long does it take for delivery, what are the methods?": "Сколько времени занимает доставка, какие есть способы?",
   "Are there any seasonal difficulties with delivery of goods from China?": "Бывают ли какие-то сезонные сложности с доставкой товара из Китая?",
   "What guarantees are provided by you and your partner suppliers?": "Какие гарантии предоставляются вами и вашими партнерами поставщиками?",
-
-  "Searching up to 3 products is free of charge, then for each product $3 . - Our commission from 5% to 10% depending on the amount of goods and complexity of the work.": "Поиск до 3 товаров осуществляется бесплатно, затем за каждый товар 3$ . — Наша комиссия от 5% до 10% в зависимости от суммы товара и сложности работы.",
+  "If the purchase price of an item is below the minimum threshold of $5,000, our minimum commission is $600.  Are you satisfied with these conditions?": "Если стоимость закупки товара ниже минимального порога в 5000 долларов, наша минимальная комиссия составляет 600 долларов.  Вас устраивают такие условия?",
+  "Searching up to 3 products is free of charge, then for each product $3 . - If you meet the minimum threshold of $5,000 or more, our commission ranges from 3% to 12% depending on the amount and complexity of the work. If the purchase price is below the minimum threshold of $5,000, our minimum commission is $600.": "Поиск до 3 товаров осуществляется бесплатно, затем за каждый товар 3$ . — При достижении минимального порога в $5 000 и более наши комиссионные составляют от 3% до 12% в зависимости от объема и сложности работы. Если цена покупки ниже минимального порога в $5 000, наша минимальная комиссия составляет $600.",
   "- There are several ways to ship goods from China:": "- Существует несколько способов доставки грузов из Китая:",
   "Sea freight - this is the most popular way to ship large shipments from China.": "Морским транспортом - это самый популярный способ доставки крупных грузов из Китая.",
   "Railways - more popular for shipping cargo from China, especially for medium-sized cargo.": "Железнодорожным транспортом - более популярен для доставки грузов из Китая, особенно для средних по объему грузов.",
@@ -140,6 +140,7 @@
   "Your name": "Ваше имя",
   "Select a social network to contact us": "Выберите соц. сеть для связи",
   "Leave a request": "Оставить заявку",
+  "A partnership that delivers value!": "Партнерство, которое приносит выгоду!",
   "The application has been successfully sent.": "Заявка успешно отправлена.",
   "Name cannot contain numbers": "Имя не может содержать цифры",
   "Success.": "Успех.",

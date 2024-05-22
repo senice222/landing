@@ -19,18 +19,6 @@ const Slider = () => {
                 <Carousel autoplay>
                     <div className={style.sliderDiv}>
                         <div className={style.item}>
-                            <img src={ceo} alt="/" />
-                        </div>
-                        <div className={style.informationSliderDiv}>
-                            <h3>{t("Evgeny Petrovich Alekseev")}</h3>
-                            <p className={style.ceo}>{t("CEO of the Company")}</p>
-                            <p className={style.descr}>
-                                {t("Responsible for the development of strategic goals. Manages the company's operational activities, including control over business processes and resources, financial resources management.")}
-                            </p>
-                        </div>
-                    </div>
-                    <div className={style.sliderDiv}>
-                        <div className={style.item}>
                             <img src={secondPerson} alt="/" />
                         </div>
                         <div className={style.informationSliderDiv}>
@@ -50,6 +38,18 @@ const Slider = () => {
                             <p className={style.ceo}>{t("Founder of the international trading company LUSHI")}</p>
                             <p className={style.descr}>
                                 {t("And other successful businesses. With 15 years of experience in cross-border e-commerce and international trade, she is responsible for integrating resources to provide partners with a supply chain. Jiao Jianjian's philosophy is ‘fair and mutually beneficial co-operation’, which is reflected in the work of LUSHI.")}
+                            </p>
+                        </div>
+                    </div>
+                    <div className={style.sliderDiv}>
+                        <div className={style.item}>
+                            <img src={ceo} alt="/" />
+                        </div>
+                        <div className={style.informationSliderDiv}>
+                            <h3>{t("Evgeny Petrovich Alekseev")}</h3>
+                            <p className={style.ceo}>{t("CEO of the Company")}</p>
+                            <p className={style.descr}>
+                                {t("Responsible for the development of strategic goals. Manages the company's operational activities, including control over business processes and resources, financial resources management.")}
                             </p>
                         </div>
                     </div>
