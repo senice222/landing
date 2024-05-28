@@ -19,15 +19,13 @@ const FeedbackModal = ({modal, setModal}) => {
 
     const onSubmit = async (data) => {
         try {
-            console.log(data)
-            const {email, name, phone} = data // messenger
+            const {email, name, phone} = data 
             const newObj = {
                 email,
                 name,
-                phone,
-                messenger: social
+                phone
             }
-            await axios.post("http://localhost:3030/api/leave-contacts-modal", newObj)
+            await axios.post(`${window.location.href}/api/leave-contacts-modal`, newObj)
             notification.success({
                 duration: 4,
                 message: t("Success."),
@@ -80,22 +78,6 @@ const FeedbackModal = ({modal, setModal}) => {
                             }}
                         />
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
-                    </div>
-                    <input type="text" className={style.socialInput} placeholder={t("Enter your messenger")}
-                           {...register("messengerInfo")}
-                    />
-                    <div className={style.socials}>
-                        <p>{t("Select a social network for communication")}</p>
-                        <div className={style.icons}>
-                            <img className={social === "telegram" ? style.active : style.item} src={tg} alt="/"
-                                 onClick={() => setSocial("telegram")}/>
-                            <img className={social === "instagram" ? style.active : style.item} src={inst} alt="/"
-                                 onClick={() => setSocial("instagram")}/>
-                            <img className={social === "viber" ? style.active : style.item} src={viber} alt="/"
-                                 onClick={() => setSocial("viber")}/>
-                            <img className={social === "wechat" ? style.active : style.item} src={wechat} alt="/"
-                                 onClick={() => setSocial("wechat")}/>
-                        </div>
                     </div>
                     <button className={style.sendCallback}>{t("Leave a request")}</button>
                 </form>

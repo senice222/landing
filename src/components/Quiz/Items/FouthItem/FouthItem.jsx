@@ -17,7 +17,7 @@ const FouthItem = ({ setStep }) => {
         if (value !== "") {
             dispatch(setMessenger(value))
             try {
-                await axios.post("http://localhost:3030/api/quiz-leave-contacts", data)
+                await axios.post(`${window.location.href}/api/quiz-leave-contacts`, data)
                 notification.success({
                     duration: 4,
                     message: t("Success."),

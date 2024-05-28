@@ -26,7 +26,10 @@ const ThirdItem = ({ setStep }) => {
                 </p>
             </div>
             <div className={style.answerFewQuestions}>
-                <p className={style.specialTitle}>{t("If the purchase price of an item is below the minimum threshold of $5,000, our minimum commission is $600.  Are you satisfied with these conditions?")}</p>
+                <p className={style.specialTitle}>
+                    {t("The minimum batch amount for an order is $5000 per item excluding logistics. Are you satisfied with this amount?")}<br /><br />
+                    {t("If the purchase price of an item is below the minimum threshold of $5,000, our minimum commission is $600.  Are you satisfied with these conditions?")}
+                    </p>
                 <div className={style.labelDiv}>
                     <label className={style.radio}>
                         <input name="radio" type="radio" value={"Да, устраивает"} onChange={(e) => handleChange(e)} defaultChecked />

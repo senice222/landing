@@ -17,7 +17,7 @@ const Feedback = () => {
 
     const onSubmit = async (data) => {
         try {
-            await axios.post("http://localhost:3030/api/feedback-modal", data)
+            await axios.post(`${window.location.href}/api/feedback-modal`, data)
             notification.success({
                 duration: 4,
                 message: t("Success."),
