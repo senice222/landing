@@ -21,14 +21,12 @@ const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2 }) => {
 
                     <div className={style.secondBlock}>
                         <div className={style.contacsBlock}>
-                            <h1>КОНТАКТЫ</h1>
+                            <h1>{t("CONTACTS")}</h1>
                             <div className={style.infoItem} style={{marginTop: "20px"}}>
                                 <img src={map} alt="/" />
                                 <div className={style.addressInfo}>
-                                    <p>Московский район, г. Минск,
-                                        ул. Железнодорожная, д. 33А, каб. 402 (кабинет 2-19)</p>
-                                    <p style={{ marginTop: "10px" }}>Блок 801, корпус 8, фаза I, Индустриальный парк
-                                        Цзиндай Смарт, Чэнфа, город Чжэнчжоу</p>
+                                    <p>{t("Moskovsky district, Minsk, st. Zheleznodorozhnaya, 33A, office. 402 (room 2-19)")}</p>
+                                    <p style={{ marginTop: "10px" }}>{t("Block 801, Building 8, Phase I, Jindai Smart Industrial Park, Chengfa, Zhengzhou City")}</p>
                                 </div>
                             </div>
                             <div className={style.infoItem}>
@@ -42,7 +40,7 @@ const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2 }) => {
                                     <img src={mail} className={style.mail} alt="/" />
                                 </div>
                                 <div className={style.addressInfo}>
-                                    <p className={style.bolderText}>lushi.minsk@gmail.com</p>
+                                    <p className={style.mailText}>lushi.minsk@gmail.com</p>
                                 </div>
                             </div>
                             <div className={style.infoItem}>
