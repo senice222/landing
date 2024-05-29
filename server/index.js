@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/api/quiz-leave-contacts", (req, res) => {
-    const { productName, howFast, arranges, messenger } = req.body
+    const { productName, howFast, arranges, email } = req.body
 
     const styledEmailContent = `
     <html>
@@ -64,7 +64,7 @@ app.post("/api/quiz-leave-contacts", (req, res) => {
             <p><strong>Название продукта:</strong> ${productName}</p>
             <p><strong>Срочность:</strong> ${howFast}</p>
             <p><strong>Согласие на минимальную партию 5000$:</strong> ${arranges}</p>
-            <p><strong>Мессенджер:</strong> ${messenger}</p>
+            <p><strong>Почта:</strong> ${email}</p>
         </div>
     </body>
     </html>

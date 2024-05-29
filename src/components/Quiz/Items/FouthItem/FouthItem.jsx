@@ -1,9 +1,9 @@
 import axios from 'axios';
-import style from '../../Quiz.module.scss'
+import style from './FouthItem.module.scss'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from "react-i18next";
-import { setMessenger } from '../../../../store/slices/ConsultSlice';
+import { setMail } from '../../../../store/slices/ConsultSlice';
 import { notification } from 'antd';
 
 const FouthItem = ({ setStep }) => {
@@ -15,7 +15,7 @@ const FouthItem = ({ setStep }) => {
 
     const handleNextStep = async () => {
         if (value !== "") {
-            dispatch(setMessenger(value))
+            dispatch(setMail(value))
             try {
                 await axios.post(`${window.location.href}/api/quiz-leave-contacts`, data)
                 notification.success({
@@ -41,12 +41,12 @@ const FouthItem = ({ setStep }) => {
                 </p>
             </div>
             <div className={style.answerFewQuestions}>
-                <p>{t("Enter your messenger")}</p>
-                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter your messenger")} />
+                <p>{t("Enter your email")}</p>
+                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter your email")} />
                 {error && <p className={style.error}>{t("Fill in the field at the top.")}</p>}
                 <div className={style.btns}>
                     <button className={style.backBtn} onClick={() => setStep((prev) => prev - 1)}>{t("Back")}</button>
-                    <button className={style.nextBtn} onClick={handleNextStep}>{t("Send a request")}</button>
+                    <button className={style.nextBtn} onClick={handleNextStep}>{t("Leave a request")}</button>
                 </div>
             </div>
         </div>

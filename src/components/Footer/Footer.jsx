@@ -18,44 +18,44 @@ const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2 }) => {
         <footer className={style.footer} ref={blockRef5}>
             <div className={style.items}>
                 <div className={style.topBlocks}>
-
-                    <div className={style.secondBlock}>
-                        <div className={style.contacsBlock}>
-                            <h1>{t("CONTACTS")}</h1>
-                            <div className={style.infoItem} style={{marginTop: "20px"}}>
-                                <img src={map} alt="/" />
-                                <div className={style.addressInfo}>
-                                    <p>{t("Moskovsky district, Minsk, st. Zheleznodorozhnaya, 33A, office. 402 (room 2-19)")}</p>
-                                    <p style={{ marginTop: "10px" }}>{t("Block 801, Building 8, Phase I, Jindai Smart Industrial Park, Chengfa, Zhengzhou City")}</p>
-                                </div>
-                            </div>
-                            <div className={style.infoItem}>
-                                <img src={clock} className={style.clock} alt="/" />
-                                <div className={style.addressInfo}>
-                                    <p className={style.bolderText}>{t("Accepting applications")} 24/7</p>
-                                </div>
-                            </div>
-                            <div className={style.infoItem}>
-                                <div className={style.mailDiv}>
-                                    <img src={mail} className={style.mail} alt="/" />
-                                </div>
-                                <div className={style.addressInfo}>
-                                    <p className={style.mailText}>lushi.minsk@gmail.com</p>
-                                </div>
-                            </div>
-                            <div className={style.infoItem}>
-                                <img src={phone} className={style.phone} alt="/" />
-                                <div className={style.addressInfo}>
-                                    <p className={style.bolderText}>+375(29)-138-45-57</p>
-                                </div>
+                    <div className={style.wrappBlocks}>
+                        <div className={style.firstBlock}>
+                            <img src={lushi} alt="/" />
+                            <div className={style.info}>
+                                <p>{t("Limited Liability Company \"Lushi International Trading Company Registration number 193684755\"")}</p>
                             </div>
                         </div>
-                    </div>
-                    <div className={style.firstBlock}>
-                        <img src={lushi} alt="/" />
-                        <div className={style.info}>
-                            <p>{t("Limited Liability Company \"Lushi International Trading Company Registration number 193684755\"")}</p>
-
+                        <div className={style.secondBlock}>
+                            <div className={style.contacsBlock}>
+                                <h1>{t("CONTACTS")}</h1>
+                                <div className={style.infoItem} style={{ marginTop: "20px" }}>
+                                    <img src={map} alt="/" />
+                                    <div className={style.addressInfo}>
+                                        <p>{t("Moskovsky district, Minsk, st. Zheleznodorozhnaya, 33A, office. 402 (room 2-19)")}</p>
+                                        <p style={{ marginTop: "10px" }}>{t("Block 801, Building 8, Phase I, Jindai Smart Industrial Park, Chengfa, Zhengzhou City")}</p>
+                                    </div>
+                                </div>
+                                <div className={style.infoItem}>
+                                    <img src={clock} className={style.clock} alt="/" />
+                                    <div className={style.addressInfo}>
+                                        <p className={style.bolderText}>{t("Accepting applications")} 24/7</p>
+                                    </div>
+                                </div>
+                                <div className={style.infoItem}>
+                                    <div className={style.mailDiv}>
+                                        <img src={mail} className={style.mail} alt="/" />
+                                    </div>
+                                    <div className={style.addressInfo}>
+                                        <p className={style.mailText}>lushi.minsk@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div className={style.infoItem}>
+                                    <img src={phone} className={style.phone} alt="/" />
+                                    <div className={style.addressInfo}>
+                                        <p className={style.bolderText}>+375(29)-138-45-57</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

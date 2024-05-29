@@ -130,6 +130,9 @@
         }
     }
 }
+.wrappBlocks {
+    display: flex;
+}
 
 @media (max-width: 1370px) {
     .items {
@@ -157,6 +160,10 @@
 }
 
 @media (max-width: 768px) {
+    .wrappBlocks {
+        display: flex;
+        flex-direction: column;
+    }
     .secondBlock {
         display: flex;
         justify-content: center;
@@ -165,6 +172,7 @@
         width: 95% !important;
     }
     .firstBlock {
+        justify-content: flex-start !important;
         img {
             width: 89px !important;
             height: 64px !important;
@@ -185,7 +193,7 @@
         }
     }
     .items {
-        padding: 10px !important;
+        padding: 20px !important;
     }
     .info {
         p {
