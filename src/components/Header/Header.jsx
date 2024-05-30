@@ -66,7 +66,7 @@ const Header = ({ setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4
                     <div className={s.links}>
                         <a onClick={() => scrollTo(blockRef1.current)}>{t("About company")}</a>
                         <a onClick={() => scrollTo(blockRef2.current)}>{t("Services")}</a>
-                        <a onClick={() => scrollTo(blockRef3.current)}>{t("Reviews")}</a>
+                        <a onClick={() => scrollTo(blockRef2.current)}>{t("Reviews")}</a>
                         <a onClick={() => scrollTo(blockRef4.current)}>F.A.Q</a>
                         <a onClick={() => scrollTo(blockRef5.current)}>{t("Contacts")}</a>
                     </div>
