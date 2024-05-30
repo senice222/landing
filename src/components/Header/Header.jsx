@@ -21,8 +21,18 @@ const HeaderResponsive = ({ setModal, blockRef6, scrollTo }) => {
                 </div>
                 <div className={s.textLang}>
                     <div className={s.imgs}>
-                        <img className={s.ru} src={rus} alt={"/"} />
-                        <img src={us} alt={"/"} />
+                        <img className={s.ru} src={rus} alt={"/"} onClick={() => {
+                        setCookie(null, 'lang', "ru", {
+                            path: '/'
+                        })
+                        window.location.reload()
+                    }} />
+                        <img src={us} alt={"/"} onClick={() => {
+                        setCookie(null, 'lang', "en", {
+                            path: '/'
+                        })
+                        window.location.reload()
+                    }} />
                     </div>
                     <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
                         setCookie(null, 'lang', "ru", {

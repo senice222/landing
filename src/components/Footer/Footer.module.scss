@@ -12,7 +12,7 @@
         .topBlocks {
             display: flex;
             justify-content: space-between;
-            width: 65%;
+            width: 81%;
             border-bottom: 1px solid #CDD1D4;
             padding-bottom: 40px;
             .firstBlock {
@@ -132,6 +132,8 @@
 }
 .wrappBlocks {
     display: flex;
+    justify-content: space-between;
+    width: 90vw;
 }
 
 @media (max-width: 1370px) {
