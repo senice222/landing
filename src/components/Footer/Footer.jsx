@@ -10,7 +10,7 @@ import clock from '../../assets/time-svgrepo-com (1) 1.png'
 import mail from '../../assets/Vector.png'
 import phone from '../../assets/phone-svgrepo-com (1) 1.png'
 
-const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2 }) => {
+const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2, blockRef4 }) => {
     // СДЕЛАТЬ ДИПЛИНКИ
     const { t } = useTranslation()
 
@@ -64,7 +64,7 @@ const Footer = ({ blockRef5, scrollTo, blockRef1, blockRef2 }) => {
                         <a onClick={() => scrollTo(blockRef1.current)}>{t("About company")}</a>
                         <a onClick={() => scrollTo(blockRef2.current)}>{t("Services")}</a>
                         <a onClick={() => scrollTo()}>{t("Reviews")}</a>
-                        <a onClick={() => scrollTo()}>F.A.Q</a>
+                        <a onClick={() => scrollTo(blockRef4.current)}>F.A.Q</a>
                     </div>
                     <div className={style.icons}>
                         <img src={tg} alt="/" />
