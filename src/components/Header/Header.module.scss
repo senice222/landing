@@ -418,7 +418,13 @@
   //margin-left: 20px;
   .imgs {
     .ru {
+      cursor: pointer;
       margin-right: 5px;
+    }
+    div {
+      img {
+        cursor: pointer;
+      }
     }
   }
 

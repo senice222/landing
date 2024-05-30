@@ -21,18 +21,18 @@ const HeaderResponsive = ({ setModal, blockRef6, scrollTo }) => {
                 </div>
                 <div className={s.textLang}>
                     <div className={s.imgs}>
-                        <img className={s.ru} src={rus} alt={"/"} onClick={() => {
-                        setCookie(null, 'lang', "ru", {
-                            path: '/'
-                        })
-                        window.location.reload()
-                    }} />
-                        <img src={us} alt={"/"} onClick={() => {
-                        setCookie(null, 'lang', "en", {
-                            path: '/'
-                        })
-                        window.location.reload()
-                    }} />
+                        <img className={s.ru} src={rus} style={{ cursor: 'pointer' }} alt={"/"} onClick={() => {
+                            setCookie(null, 'lang', "ru", {
+                                path: '/'
+                            })
+                            window.location.reload()
+                        }} />
+                        <img src={us} alt={"/"} style={{ cursor: 'pointer' }} onClick={() => {
+                            setCookie(null, 'lang', "en", {
+                                path: '/'
+                            })
+                            window.location.reload()
+                        }} />
                     </div>
                     <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
                         setCookie(null, 'lang', "ru", {
@@ -72,8 +72,18 @@ const Header = ({ setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4
                     </div>
                     <div className={s.langDiv}>
                         <div className={s.imgs}>
-                            <img src={rus} alt={"/"} />
-                            <img className={s.us} src={us} alt={"/"} />
+                            <img src={rus} alt={"/"} style={{cursor: "pointer"}} onClick={() => {
+                                setCookie(null, 'lang', "ru", {
+                                    path: '/'
+                                })
+                                window.location.reload()
+                            }} />
+                            <img className={s.us} src={us} style={{cursor: "pointer"}} alt={"/"} onClick={() => {
+                                setCookie(null, 'lang', "en", {
+                                    path: '/'
+                                })
+                                window.location.reload()
+                            }} />
                         </div>
                         <div className={s.textLang}>
                             <p className={lang === 'ru' ? `${s.active} ${s.ru}` : s.ru} onClick={() => {
