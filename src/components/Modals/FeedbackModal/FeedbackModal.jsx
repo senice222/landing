@@ -25,7 +25,7 @@ const FeedbackModal = ({modal, setModal}) => {
                 name,
                 phone
             }
-            await axios.post(`${window.location.href}/api/leave-contacts-modal`, newObj)
+            await axios.post(`${window.location.href}api/leave-contacts-modal`, newObj)
             notification.success({
                 duration: 4,
                 message: t("Success."),

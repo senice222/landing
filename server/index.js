@@ -87,7 +87,8 @@ app.post("/api/quiz-leave-contacts", (req, res) => {
 
 
 app.post("/api/feedback-modal", (req, res) => {
-    const { phone, name, messenger } = req.body
+    const { phone, name, email } = req.body
+    const emailSection = email ? `<p><strong>Почта:</strong> ${email}</p>` : `<p>Почты нет</p>`;
 
     const styledEmailContent = `
     <html>
@@ -131,11 +132,11 @@ app.post("/api/feedback-modal", (req, res) => {
             <h2>Новая заявка на консультацию!</h2>
             <p><strong>Имя:</strong> ${name}</p>
             <p><strong>Телефон:</strong> ${phone}</p>
-            <p><strong>Мессенджер:</strong> ${messenger}</p>
+            ${emailSection}
         </div>
     </body>
     </html>
-`;
+    `;
     const mailOptions = {
         from: '"Новая заявка на консультацию!" n.socialmedia12@gmail.com',
         to: process.env.RECEIVER,

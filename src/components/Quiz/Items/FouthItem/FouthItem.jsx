@@ -12,7 +12,7 @@ const FouthItem = ({ setStep }) => {
     const { t } = useTranslation()
     const dispatch = useDispatch()
     const data = useSelector(state => state.consult)
-
+    
     const handleNextStep = async () => {
         if (value !== "") {
             dispatch(setMail(value))

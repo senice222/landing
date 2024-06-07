@@ -19,7 +19,7 @@ const Feedback = () => {
         try {
             await axios.post(`${window.location.href}/api/feedback-modal`, data)
             notification.success({
-                duration: 4,
+                duration: 3,
                 message: t("Success."),
                 description: t("The application has been successfully sent."),
             })
@@ -68,8 +68,8 @@ const Feedback = () => {
                             }}
                         />
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
-                        <input type="text" className={style.nameInput} style={{ marginTop: "15px" }} placeholder={t("Enter your convenient messenger")} {...register("messenger", { required: true })} />
-                        {errors.messenger && <p className={style.error}>{t("Enter your convenient messenger")}</p>}
+                        <input type="text" className={style.nameInput} style={{ marginTop: "15px" }} placeholder={t("Enter your email")} {...register("email", { required: false })} />
+                        {/* {errors.messenger && <p className={style.error}>{t("Enter your email")}</p>} */}
                         <button type="submit" className={style.callbackbtn}>{t("Leave a request")}</button>
                     </form>
                 </motion.div>
