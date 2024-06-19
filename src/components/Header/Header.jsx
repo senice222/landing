@@ -6,15 +6,16 @@ import us from '../../assets/flag-us-svgrepo-com.png'
 import { parseCookies, setCookie } from "nookies";
 import { useTranslation } from "react-i18next";
 import burger from '../../assets/free-icon-menu-4254068.png'
+import cross from '../../assets/close.png'
 
-const HeaderResponsive = ({ setModal, blockRef6, scrollTo }) => {
+const HeaderResponsive = ({ setModal, blockRef6, scrollTo, opened }) => {
     const { lang } = parseCookies()
 
     return (
         <div className={s.responsiveHeaderWrapper}>
             <div className={s.responsiveHeader}>
-                <div onClick={() => setModal(true)} className={s.burgerIcon}>
-                    <img src={burger} alt="menu" className={s.menu} />
+                <div onClick={() => setModal(true)} className={opened ? s.icon : s.burgerIcon}>
+                    <img src={opened ? cross : burger} alt="menu" className={s.menu} />
                 </div>
                 <div className={s.imgDiv} onClick={() => scrollTo(blockRef6?.current)} >
                     <img src={lushi} className={s.image2} alt={"logo"} />
@@ -54,7 +55,7 @@ const HeaderResponsive = ({ setModal, blockRef6, scrollTo }) => {
 }
 
 
-const Header = ({ setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5, blockRef6 }) => {
+const Header = ({ setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5, blockRef6, opened }) => {
     const { t } = useTranslation()
     const { lang } = parseCookies()
 
@@ -104,6 +105,7 @@ const Header = ({ setModal, scrollTo, blockRef1, blockRef2, blockRef3, blockRef4
                 </div>
             </div>
             <HeaderResponsive
+                opened={opened}
                 setModal={setModal}
                 blockRef6={blockRef6}
                 scrollTo={scrollTo}

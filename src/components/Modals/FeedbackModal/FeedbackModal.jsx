@@ -2,10 +2,6 @@ import React, {useState} from 'react'
 import style from './FeedbackModal.module.scss'
 import {PhoneInput} from 'react-international-phone';
 import 'react-international-phone/style.css';
-import tg from '../../../assets/telegram-svgrepo-com (1).png'
-import inst from '../../../assets/instagram-svgrepo-com (1).png'
-import viber from '../../../assets/viber-svgrepo-com (1).png'
-import wechat from '../../../assets/wechat.png'
 import {useTranslation} from "react-i18next";
 import {useForm} from "react-hook-form";
 import axios from "axios";
@@ -13,9 +9,14 @@ import {notification} from "antd";
 
 const FeedbackModal = ({modal, setModal}) => {
     const [phone, setPhone] = useState("")
-    const [social, setSocial] = useState('telegram')
     const {register, handleSubmit, formState: {errors}, reset} = useForm();
     const {t} = useTranslation()
+
+    const validatePhoneNumber = (value) => {
+        const cleanedValue = value.replace(/[^\d+]/g, '');
+        const phoneRegex = /^\+\d{10,15}$/;
+        return phoneRegex.test(cleanedValue) || t("Enter your phone");
+    };
 
     const onSubmit = async (data) => {
         try {
@@ -71,7 +72,10 @@ const FeedbackModal = ({modal, setModal}) => {
                         {errors.name && <p className={style.error}>{errors.name.message}</p>}
                         <PhoneInput
                             defaultCountry="ru"
-                            {...register("phone", {required: t("Enter your phone")})}
+                            {...register("phone", {
+                                required: t("Enter your phone"),
+                                validate: validatePhoneNumber
+                            })}
                             className={style.phoneInput}
                             onChange={(phone) => {
                                 setPhone(phone)

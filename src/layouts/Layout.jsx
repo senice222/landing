@@ -13,6 +13,7 @@ const Layout = ({children, blockRef1, blockRef2, blockRef3, blockRef4, blockRef5
                 setModal={setOpened} scrollTo={scrollTo}
                 blockRef1={blockRef1} blockRef2={blockRef2} blockRef3={blockRef3} blockRef4={blockRef4}
                 blockRef5={blockRef5} blockRef6={blockRef6}
+                opened={opened}
             />
             <BurgerModal opened={opened} setOpened={setOpened}
                          scrollTo={scrollTo}

@@ -1,36 +1,52 @@
 import axios from 'axios';
 import style from './FouthItem.module.scss'
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useTranslation } from "react-i18next";
-import { setMail } from '../../../../store/slices/ConsultSlice';
 import { notification } from 'antd';
 
 const FouthItem = ({ setStep }) => {
     const [value, setValue] = useState('')
+    // const [isEmail, setIsEmail] = useState('')
     const [error, setError] = useState(false)
     const { t } = useTranslation()
-    const dispatch = useDispatch()
     const data = useSelector(state => state.consult)
     
+    const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    };
+
     const handleNextStep = async () => {
-        if (value !== "") {
-            dispatch(setMail(value))
+        if (value === "") {
+            setError(true);
+        } else if (!validateEmail(value)) {
+            setError(true);
+            notification.error({
+                duration: 4,
+                message: t("Error."),
+                description: t("Please enter a valid email address."),
+            });
+        } else {
+            setError(false);
             try {
-                await axios.post(`${window.location.href}/api/quiz-leave-contacts`, data)
+                const updatedData = {
+                    ...data,
+                    email: value
+                }
+                await axios.post(`${window.location.href}api/quiz-leave-contacts`, updatedData);
                 notification.success({
                     duration: 4,
                     message: t("Success."),
                     description: t("The application has been successfully sent."),
-                })
-                setStep(0)
+                });
+                setStep(0);
             } catch (e) {
-                console.log(e)
+                console.log(e);
+                setError(true);  
             }
-        } else {
-            setError(true)
         }
-    }
+    };
 
     return (
         <div className={style.quiz}>
@@ -43,7 +59,7 @@ const FouthItem = ({ setStep }) => {
             <div className={style.answerFewQuestions}>
                 <p>{t("Enter your email")}</p>
                 <input value={value} onChange={(e) => setValue(e.target.value)} type="text" placeholder={t("Enter your email")} />
-                {error && <p className={style.error}>{t("Fill in the field at the top.")}</p>}
+                {error && <p className={style.error}>{t("Please enter a valid email address.")}</p>}
                 <div className={style.btns}>
                     <button className={style.backBtn} onClick={() => setStep((prev) => prev - 1)}>{t("Back")}</button>
                     <button className={style.nextBtn} onClick={handleNextStep}>{t("Leave a request")}</button>

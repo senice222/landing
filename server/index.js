@@ -1,12 +1,18 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const { join } = require('path')
+const fs = require('fs')
 require('dotenv').config();
+const { Telegraf } = require('telegraf');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+const telegramBot = new Telegraf('put_token_here')
+const LeadsChatId = '-111111111111'
 
 const transporter = nodemailer.createTransport({
     host: process.env.HOST,
@@ -17,6 +23,19 @@ const transporter = nodemailer.createTransport({
         pass: process.env.PASS,
     },
 });
+
+const publicPath = join(__dirname, 'build/');
+console.log(publicPath)
+app.use(express.static(publicPath));
+
+
+app.get('/', (req, res) => {
+    res.send(
+        fs.readFileSync(
+            join(__dirname, 'build', 'index.html')
+        , 'utf-8')
+    );
+})
 
 app.post("/api/quiz-leave-contacts", (req, res) => {
     const { productName, howFast, arranges, email } = req.body
@@ -83,6 +102,13 @@ app.post("/api/quiz-leave-contacts", (req, res) => {
             res.status(200).json({ message: 'Email sent successfully' });
         }
     });
+
+    telegramBot.telegram.sendMessage(LeadsChatId, `Новая заявка с квиза!
+
+Название продукта: ${productName}
+Срочность: ${howFast}
+Согласие на минимальную партию 5000$: ${arranges}
+Почта: ${email}`)
 })
 
 
@@ -151,6 +177,12 @@ app.post("/api/feedback-modal", (req, res) => {
             res.status(200).json({ message: 'Email sent successfully' });
         }
     });
+
+    telegramBot.telegram.sendMessage(LeadsChatId, `Новая заявка на консультацию!
+
+Имя: ${name}
+Телефон: ${phone}
+E-MAIL: ${email ? email :"Отсутствует."}`)
 });
 
 app.post("/api/leave-contacts-modal", (req, res) => {
@@ -217,9 +249,15 @@ app.post("/api/leave-contacts-modal", (req, res) => {
             res.status(200).json({ message: 'Email sent successfully' });
         }
     });
+
+    telegramBot.telegram.sendMessage(LeadsChatId, `Новая заявка на консультацию!
+
+Имя: ${name}
+Телефон: ${phone}
+E-MAIL: ${email ? email :"Отсутствует."}`)
 })
 
 
 
-const port = 3030;
+const port = 80;
 app.listen(port, () => console.log(`Server running on port ${port}`));

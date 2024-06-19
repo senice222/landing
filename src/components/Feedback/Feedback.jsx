@@ -15,9 +15,15 @@ const Feedback = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { t } = useTranslation()
 
+    const validatePhoneNumber = (value) => {
+        const cleanedValue = value.replace(/[^\d+]/g, '');
+        const phoneRegex = /^\+\d{10,15}$/;
+        return phoneRegex.test(cleanedValue) || t("Enter your phone");
+    };
+    
     const onSubmit = async (data) => {
         try {
-            await axios.post(`${window.location.href}/api/feedback-modal`, data)
+            await axios.post(`${window.location.href}api/feedback-modal`, data)
             notification.success({
                 duration: 3,
                 message: t("Success."),
@@ -60,7 +66,10 @@ const Feedback = () => {
                         {errors.name && <p className={style.error}>{errors.name.message}</p>}
                         <PhoneInput
                             defaultCountry="ru"
-                            {...register("phone", { required: t("Enter your phone") })}
+                            {...register("phone", {
+                                required: t("Enter your phone"),
+                                validate: validatePhoneNumber
+                            })}
                             className={style.phoneInput}
                             value={phone}
                             onChange={(phone) => {
@@ -69,7 +78,6 @@ const Feedback = () => {
                         />
                         {errors.phone && <p className={style.error}>{errors.phone.message}</p>}
                         <input type="text" className={style.nameInput} style={{ marginTop: "15px" }} placeholder={t("Enter your email")} {...register("email", { required: false })} />
-                        {/* {errors.messenger && <p className={style.error}>{t("Enter your email")}</p>} */}
                         <button type="submit" className={style.callbackbtn}>{t("Leave a request")}</button>
                     </form>
                 </motion.div>
