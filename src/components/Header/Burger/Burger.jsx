@@ -35,7 +35,7 @@ const BurgerModal = ({ opened, setOpened, scrollTo, blockRef1, blockRef2, blockR
                 <div className={s.bottom} onClick={() => window.location.href = 'tel:+375291384557'}>
                     <div className={s.line} />
                     <div className={s.catalog}>Наш номер телефона</div>
-                    <h1 className={s.number}>+375(29) - 1 - 384 - 557</h1>
+                    <h1 className={s.number}>+375(29) 1 - 384 - 557</h1>
                 </div>
             </div>
         </div>
