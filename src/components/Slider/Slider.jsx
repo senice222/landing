@@ -71,7 +71,7 @@ const Slider = () => {
                         </div>
                         <div className={style.informationSliderDiv}>
                             <h3>{t("Wang Jishuang")}</h3>
-                            <p className={style.ceo}>{t("Experienced transport department manager.")}</p>
+                            <p className={style.ceo}>{t("Transport department manager.")}</p>
                             <p className={style.descr}>
                                 {t("She is an outstanding logistics professional with extensive experience, responsible for developing and implementing effective logistics strategies. Wang Jishuang has excellent skills in transportation planning, warehouse management and supply chain optimisation for on-time delivery of goods.")}
                             </p>
