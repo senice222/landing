@@ -73,14 +73,18 @@ const TopComponent = ({ blockRef1, setModal }) => {
                 transition={{ delay: 0.2, x: { type: 'spring', stiffness: 60 }, opacity: { duration: 1 }, ease: "easeIn", duration: 1 }}
             >
                 <div className={style.iconDiv}>
-                    <img src={tg} alt="/" />
+                    <a className={style.link} href="https://www.instagram.com/lushi_internationaltrade?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                        <img src={inst} alt="Instagram" />
+                    </a>
                 </div>
                 <div className={style.iconDiv}>
-                    <img src={inst} alt="/" />
+                    <a className={style.link} href="https://t.me/lu_shi1" target="_blank" rel="noopener noreferrer">
+                        <img src={tg} alt="Telegram" />
+                    </a>
                 </div>
-                <div className={style.iconDiv}>
+                {/* <div className={style.iconDiv}>
                     <img src={viber} alt="/" />
-                </div>
+                </div> */}
             </motion.div>
             <motion.div className={style.btnDiv}
                 initial={{ x: -100, opacity: 0 }}
